@@ -26,6 +26,7 @@
                 android:value="" />
         </activity>
         <activity android:name=".PostActivity" />
+        <activity android:name=".CreatePostActivity" />
     </application>
 
 </manifest>

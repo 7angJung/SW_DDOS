@@ -16,6 +16,8 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
+    static ArrayList<Post> testDataSet;
+    static CustomAdapter customAdapter;
     int newDataNumber = 21;
 
     @Override
@@ -27,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         //----- 테스트를 위한 더미 데이터 생성 --------------------
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        ArrayList<Post> testDataSet = new ArrayList<>();
+        testDataSet = new ArrayList<>();
         for (int i = 1; i<=20; i++) {
             String id = "" + i; String title = "제목" + i;
             String content = "test" + i;    String author = "작가" + i;
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager((Context) this);
         recyclerView.setLayoutManager(linearLayoutManager);  // LayoutManager 설정
 
-        CustomAdapter customAdapter = new CustomAdapter(this, testDataSet);
+        customAdapter = new CustomAdapter(this, testDataSet);
 
         //===== [Click 이벤트 구현을 위해 추가된 코드] ==============
         customAdapter.setOnItemClickListener(new CustomAdapter.OnItemClickListener() {
