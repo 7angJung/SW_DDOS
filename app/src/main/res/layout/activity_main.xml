@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RecyclerView 테스트"
+        android:text="게시판"
         android:textSize="32dp"
         android:textColor="#FFFFFFFF"
         android:padding="8dp"
@@ -36,7 +36,7 @@
             android:textColor="#FFFFFFFF"
             android:layout_margin="8dp"
             android:padding="8dp"
-            android:backgroundTint="#FFFF0000"
+            android:backgroundTint="#FF0000FF"
             android:layout_gravity="center"/>
         <Button
             android:id="@+id/buttonDeleteItem"
@@ -51,17 +51,20 @@
             android:backgroundTint="#FF0000FF"
             android:layout_gravity="center"/>
         <Button
-            android:id="@+id/buttonSearchItem"
+            android:id="@+id/reg_button1"
+            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="검색"
+            android:textColor="#FFFFFF"
+            android:text="글 작성"
             android:textSize="24dp"
-            android:textColor="#FFFFFFFF"
             android:layout_margin="8dp"
             android:padding="8dp"
             android:backgroundTint="#FF0000FF"
-            android:layout_gravity="center"/>
+            />
+
+
+
     </LinearLayout>
 
 

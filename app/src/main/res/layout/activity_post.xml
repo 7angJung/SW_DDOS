@@ -1,37 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:padding="16dp"
     android:layout_height="match_parent"
-    android:columnCount="2"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/TitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/AuthorText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/timeStampText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/ContentText"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="650dp"
-        android:layout_columnSpan="2"
-        android:padding="5dp"
-        android:text="TextView" />
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
 
-</GridLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="제목"/>
+
+                <TextView
+                    android:id="@+id/TitleText"
+                    android:padding="16dp"
+                    android:background="#eeeeee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="제목 내용"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Author"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="작성자"/>
+
+                <TextView
+                    android:id="@+id/AuthorText"
+                    android:padding="16dp"
+                    android:background="#eeeeee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="작성자 내용" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/timeStamp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="작성일"/>
+
+                <TextView
+                    android:id="@+id/timeStampText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#eeeeee"
+                    android:padding="16dp"
+                    android:text="작성일 내용" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="내용" />
+
+            <TextView
+                android:id="@+id/ContentText"
+                android:padding="16dp"
+                android:background="#eeeeee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="내용 항목"
+                />
+
+            <TextView
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="댓글"
+                />
+
+            <LinearLayout
+                android:id="@+id/comment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/comment_et"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:layout_weight="1"
+            android:hint="댓글 내용을 입력하세요"/>
+        <Button
+            android:id="@+id/reg_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:text="등록하기"/>
+    </LinearLayout>
+</LinearLayout>

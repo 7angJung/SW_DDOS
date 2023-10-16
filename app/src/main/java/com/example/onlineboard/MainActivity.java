@@ -101,5 +101,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //-----------------------------------------------------------
+        Button createPostButton = findViewById(R.id.reg_button1);
+        createPostButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // "글 작성" 버튼을 클릭하면 CreatePostActivity로 이동
+                Intent intent = new Intent(MainActivity.this, CreatePostActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
