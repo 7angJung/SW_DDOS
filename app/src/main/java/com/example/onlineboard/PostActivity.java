@@ -17,37 +17,42 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class PostActivity extends AppCompatActivity {
-    private Post post;
+    private Post post; // post 객체
+    EditText commentEditText; // 댓글 내용이 담길 EditText
+    Button registerButton; // 댓글 달기 버튼
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { // 화면 생성
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
 
-        // Intent에서 데이터를 받아온다
+        // Intent에서 데이터를 받아오는 작업
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra("post")) {
-            post = (Post) intent.getSerializableExtra("post");
+            post = (Post) intent.getSerializableExtra("post"); // post 객체를 동기화함
 
             // Post 객체의 정보를 화면에 표시
-            TextView titleTextView = findViewById(R.id.TitleText);
-            TextView authorTextView = findViewById(R.id.AuthorText);
-            TextView timeStampTextView = findViewById(R.id.timeStampText);
-            TextView contentTextView = findViewById(R.id.ContentText);
-
+            TextView titleTextView = findViewById(R.id.TitleText); // 제목
+            TextView authorTextView = findViewById(R.id.AuthorText); // 작가
+            TextView timeStampTextView = findViewById(R.id.timeStampText); // 작성시간
+            TextView contentTextView = findViewById(R.id.ContentText); // 내용
             titleTextView.setText(post.getTitle());
             authorTextView.setText(post.getAuthor());
             timeStampTextView.setText(post.getTimeStamp());
             contentTextView.setText(post.getContent());
-        }
+            // post 객체에서 내용들을 받아와 setText
+            
+            commentEditText = findViewById(R.id.comment_et); // 댓글 내용
+            registerButton = findViewById(R.id.reg_button); // 작성 버튼
 
-        EditText commentEditText = findViewById(R.id.comment_et);
-        Button registerButton = findViewById(R.id.reg_button);
+            updateCommentUI(post.getComments()); // 댓글 목록을 화면에 표시 (후에 DB로 재구성할 예정)
+        }
+        
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String commentContent = commentEditText.getText().toString();
+                String commentContent = commentEditText.getText().toString(); // 댓글 내용 받아와서 문자열로 저장
                 if (!commentContent.isEmpty()) {
                     // 댓글 생성
                     String commentId = generateCommentId(); // 댓글 고유 ID 생성
@@ -70,7 +75,7 @@ public class PostActivity extends AppCompatActivity {
     }
 
     private void updateCommentUI(ArrayList<Comment> comments) {
-        LinearLayout commentLayout = findViewById(R.id.comment_layout);
+        LinearLayout commentLayout = findViewById(R.id.comment_layout); // 댓글이 담길 선형 레이아웃 객체
         commentLayout.removeAllViews(); // 댓글 목록 뷰를 초기화
 
         // 댓글 목록을 동적으로 생성하여 추가
@@ -92,10 +97,11 @@ public class PostActivity extends AppCompatActivity {
         }
     }
 
-    // 댓글 고유 ID를 생성하는 메서드 (원하는 방식으로 수정 가능)
+    // 댓글 고유 ID를 생성하는 메서드
     private String generateCommentId() {
-        // 여기에 원하는 댓글 ID 생성 로직을 추가하세요.
-        // 예를 들어, 현재 시간을 기반으로 한 고유 ID 생성 등을 할 수 있습니다.
+        // 댓글 ID는 후에 회원가입 화면 연동 후 변경할 예정
         return "comment_" + System.currentTimeMillis();
     }
+
+
 }

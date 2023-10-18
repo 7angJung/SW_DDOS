@@ -16,12 +16,12 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    static ArrayList<Post> testDataSet;
-    static CustomAdapter customAdapter;
-    int newDataNumber = 21;
+    static ArrayList<Post> testDataSet; // Post 클래스를 저장하는 ArrayList, DB 연동시 변경 예정
+    static CustomAdapter customAdapter; // RecyclerView 관리를 위한 Adapter
+    int newDataNumber = 21; // 임시로 사용하는 데이터 수 번호
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { // 화면 생성
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -29,29 +29,34 @@ public class MainActivity extends AppCompatActivity {
         //----- 테스트를 위한 더미 데이터 생성 --------------------
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        testDataSet = new ArrayList<>();
-        for (int i = 1; i<=20; i++) {
+        testDataSet = new ArrayList<>(); // ArrayList 할당
+        for (int i = 1; i<=20; i++) { // 20개의 포스트 임시 생성
             String id = "" + i; String title = "제목" + i;
             String content = "test" + i;    String author = "작가" + i;
-            long currentTimeMillis = System.currentTimeMillis();
+            // post 요소들 (id, 제목, 내용, 작성자) 설정
+            long currentTimeMillis = System.currentTimeMillis(); // 시간 정보 저장
+
 
             // 밀리초를 Date 객체로 변환
             Date date = new Date(currentTimeMillis);
 
             // Date 객체를 원하는 형식의 문자열로 변환
-            String formattedDate = dateFormat.format(date);
-            String timeStamp = "작성일: " + formattedDate;
+            String timeStamp = dateFormat.format(date);
 
+            // post 객체 생성한 후 ArrayList에 추가
             Post post = new Post(id, title, content, author, timeStamp);
             testDataSet.add(post);
         }
         //--------------------------------------------------------
 
+        // recyclerView 객체
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
+        // 선형 리스트 LayoutManager
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager((Context) this);
         recyclerView.setLayoutManager(linearLayoutManager);  // LayoutManager 설정
 
+        // recyclerView 연결용 customAdapter 객체 생성
         customAdapter = new CustomAdapter(this, testDataSet);
 
         //===== [Click 이벤트 구현을 위해 추가된 코드] ==============
@@ -68,9 +73,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(customAdapter); // 어댑터 설정
 
 
-        //----- 데이터 추가/삭제 버튼 -------------------------------
+        //----- 데이터 추가/삭제 버튼, 임시 테스트용 -------------------------------
         Button buttonAddItem = findViewById(R.id.buttonAddItem);
         Button buttonDeleteItem = findViewById(R.id.buttonDeleteItem);
+        // 추가 버튼과 삭제 버튼
 
         buttonAddItem.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //-----------------------------------------------------------
-        Button createPostButton = findViewById(R.id.reg_button1);
+        Button createPostButton = findViewById(R.id.reg_button1); // 글 작성 버튼
         createPostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, CreatePostActivity.class);
                 startActivity(intent);
             }
-        });
+        }); // 글 작성 버튼 누를 시 처리
 
     }
 }

@@ -18,6 +18,7 @@ public class Post implements Serializable { // 게시판의 글 객체를 표현
         comments = new ArrayList<>();
     } // 생성자
 
+    //==================================================================
     String getPost_id() {return post_id;}
     String getTitle() {return title;}
     String getContent() {return content;}
@@ -28,12 +29,15 @@ public class Post implements Serializable { // 게시판의 글 객체를 표현
     void setContent(String content) {this.content = content;}
     void setAuthor(String author) {this.author = author;}
     void setTimeStamp(String timeStamp) {this.timeStamp = timeStamp;}
-    // getter 함수, setter 함수 설정
+    // ============= getter 함수, setter 함수 설정 ========================
 
+    //=======================================================================
     public void addComment(Comment comment) {
         comments.add(comment);
-    } // 댓글 추가용 함수
+    } // 댓글 추가
+    public void setComment(ArrayList<Comment> comments) {this.comments = comments;} // 댓글 리스트 설정
     public ArrayList<Comment> getComments() {
         return comments;
     } // 댓글 반환
+    //======================Comments용 함수===================================
 }

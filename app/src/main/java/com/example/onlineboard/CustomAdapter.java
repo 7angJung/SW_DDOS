@@ -12,11 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
+    // RecyclerView와 함께 사용하기 위한 Adapter 클래스
+    // RecyclerView에 데이터를 연결하고 아이템의 뷰를 생성하는 역할을 함
 
     private ArrayList<Post> localDataSet;
     private Context context;
 
-    //===== [Click 이벤트 구현을 위해 추가된 코드] ==========================
+    //===== Click 이벤트 구현을 위해 추가된 코드 ==========================
     // OnItemClickListener 인터페이스 선언
     public interface OnItemClickListener {
         void onItemClicked(int position, Post post);
@@ -40,6 +42,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
 
     //----- 뷰홀더 클래스 ---------------------------------------------------
+    //  각 아이템을 보유하고 있는 뷰로, ViewHolder 클래스는 아이템의 뷰 요소들을 저장함
     public static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
 
@@ -61,22 +64,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                     }
                 }
             });
-
-            /* itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    // 클릭한 항목의 데이터를 다음 액티비티로 전달하여 표시
-                    Intent intent = new Intent(itemView.getContext(), PostActivity.class);
-                    intent.putExtra("post", post); // 클릭한 항목의 데이터 전달
-                    itemView.getContext().startActivity(intent);
-                }
-            }); */
         }
     }
     //---------------------------------------------------------------------
-
-    //----- 생성자 ---------------------------------------------------------
-
 
     //----- RecyclerView Adapter 필수 구현 항목 ----------------------------
     @NonNull
@@ -92,7 +82,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public void onBindViewHolder(@NonNull CustomAdapter.ViewHolder holder, int position) {
         Post post = localDataSet.get(position);
         holder.bind(post, itemClickListener);
-    }
+    } // 뷰 요소 설정
 
     @Override   // 전체 데이터의 갯수를 리턴한다.
     public int getItemCount() {
