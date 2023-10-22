@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="20dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/mokpo_user" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="LOGIN"
+            android:textColor="#76a6f0"
+            android:textSize="22sp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/id_after"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/id_before"/>
+            <EditText
+                android:id="@+id/textView01"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="8dp"
+                android:hint="아이디를 입력하세요"
+                android:textColor="#525252"
+                android:textColorHint="#ccc"
+                android:textSize="14sp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/password_after"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/passwd_before"/>
+        <EditText
+            android:id="@+id/textView02"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:hint="비밀번호를 입력하세요"
+            android:textColor="#525252"
+            android:textColorHint="#ccc"
+            android:textSize="14sp"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/login"
+            android:text="로그인"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            app:backgroundTint="@android:color/transparent"
+            app:backgroundTintMode="screen"/>
+    </FrameLayout>
+</LinearLayout>
