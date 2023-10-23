@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.m_git'
-    compileSdk 32
+    namespace 'com.example.mgit'
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.m_git"
+        applicationId "com.example.mgit"
         minSdk 21
         targetSdk 32
         versionCode 1
