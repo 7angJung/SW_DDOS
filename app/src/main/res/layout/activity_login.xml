@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,11 +11,10 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/mmulogo"
+        android:layout_height="360dp"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"
-        >
+        android:background="@drawable/mmulogo">
 
     </ImageView>
 
@@ -25,7 +25,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Student ID"
+            android:hint="학번"
+            android:id="@+id/editID"
             >
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -37,7 +38,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="Password"
+            android:hint="비밀번호"
+            android:id="@+id/editPassword"
             >
         </com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
@@ -48,39 +50,25 @@
         android:background="@drawable/bin_darkblue"
         android:textColor="#ffffff"
         android:layout_marginBottom="16dp"
+        android:id="@+id/loginButton"
         android:text="Log in">
-    </Button>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginBottom="16dp"
-        android:text="Or">
-    </TextView>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/bin_darkblue"
-        android:textColor="#ffffff"
-        android:layout_marginBottom="16dp"
-        android:text="Login with Facebook">
     </Button>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:weightSum="10"
+        android:id="@+id/LinearLayout_login"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_weight="5"
-            android:textSize="24dp"
-            android:text="Find Password"
+            android:id="@+id/findPW"
+            android:textSize="24sp"
+            android:text="비밀번호 찾기"
             >
         </TextView>
         <TextView
@@ -88,8 +76,9 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_weight="5"
-            android:text="Sign up"
-            android:textSize="24dp"
+            android:id="@+id/signin"
+            android:text="회원가입"
+            android:textSize="24sp"
             android:textColor="@android:color/holo_blue_dark"
             >
         </TextView>
