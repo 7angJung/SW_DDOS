@@ -44,16 +44,18 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:src="@drawable/id_before"/>
-            <EditText
-                android:id="@+id/textView01"
-                android:layout_width="260dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="8dp"
-                android:hint="아이디를 입력하세요"
-                android:textColor="#525252"
-                android:textColorHint="#ccc"
-                android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/textView01"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="8dp"
+            android:hint="아이디를 입력하세요"
+            android:textColor="#525252"
+            android:textColorHint="#ccc"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
     </FrameLayout>
 
     <FrameLayout
@@ -69,6 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:src="@drawable/passwd_before"/>
+
         <EditText
             android:id="@+id/textView02"
             android:layout_width="260dp"
@@ -78,7 +81,8 @@
             android:hint="비밀번호를 입력하세요"
             android:textColor="#525252"
             android:textColorHint="#ccc"
-            android:textSize="14sp"/>
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
     </FrameLayout>
 
     <FrameLayout
