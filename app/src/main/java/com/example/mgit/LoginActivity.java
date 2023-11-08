@@ -8,6 +8,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginActivity extends AppCompatActivity {
     TextView sign;
+    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +16,16 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         sign = findViewById(R.id.signin);
+        login = findViewById(R.id.loginButton);
 
         sign.setOnClickListener(v-> {
             Intent intent = new Intent(this, RegisterActivity.class);
             startActivity(intent);
         });
+
+        login.setOnClickListener(v-> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        })
     }
 }
