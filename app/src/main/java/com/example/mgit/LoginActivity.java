@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Button;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginActivity extends AppCompatActivity {
@@ -15,8 +16,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        sign = findViewById(R.id.signin);
-        login = findViewById(R.id.loginButton);
+        sign = (TextView)findViewById(R.id.signin);
+        login = (Button)findViewById(R.id.loginButton);
 
         sign.setOnClickListener(v-> {
             Intent intent = new Intent(this, RegisterActivity.class);
@@ -26,6 +27,6 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(v-> {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-        })
+        });
     }
 }
