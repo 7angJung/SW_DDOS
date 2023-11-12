@@ -2,13 +2,13 @@ package kr.ac.information_card;
 
 public class Information {
     private int information_Id;
-    private String name;
+    private String title;
     private String ImgSrc;
     private String content1, content2;
 
-    Information(int information_Id, String name, String Imgsrc, String content1, String content2){
+    Information(int information_Id, String title, String Imgsrc, String content1, String content2){
         this.information_Id = information_Id;
-        this.name = name;
+        this.title = title;
         this.ImgSrc = Imgsrc;
         this.content1 = content1;
         this.content2 = content2;
@@ -18,8 +18,8 @@ public class Information {
         return information_Id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
     public String getImgSrc() {
@@ -38,8 +38,8 @@ public class Information {
         this.information_Id = information_Id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setImgSrc(String imgSrc) {
