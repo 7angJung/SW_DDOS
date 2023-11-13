@@ -1,26 +1,33 @@
 package com.example.mgit;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class RegisterActivity extends AppCompatActivity {
-    TextView back;
-    EditText name,id,pw,pw2,birth;
-    Button pwcheck, submit;
+    private TextView back;
+    private EditText name,id,pw,pw2,birth;
+    private Button pwcheck, submit;
+    private ServiceAPI service;
+    private ProgressBar ProgressView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +44,8 @@ public class RegisterActivity extends AppCompatActivity {
         pw=findViewById(R.id.signPW);
         pw2=findViewById(R.id.signPW2);
         birth=findViewById(R.id.signBirth);
+
+        service = RetrofitClient.getClient().create(ServiceAPI.class);
 
         birth.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,8 +93,93 @@ public class RegisterActivity extends AppCompatActivity {
         //회원가입 완료 버튼
         submit = findViewById(R.id.signupbutton);
         submit.setOnClickListener(v -> {
+            attemptRegister();
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         });
+    }
+
+    private void attemptRegister() {
+        name.setError(null);
+        id.setError(null);
+        pw.setError(null);
+        birth.setError(null);
+
+        String userName = name.getText().toString();
+        String userID = id.getText().toString();
+        String userBirth = id.getText().toString();
+        String userPwd = pw.getText().toString();
+
+        boolean cancel = false;
+        View focusView = null;
+
+        // 패스워드의 유효성 검사
+        if (userPwd.isEmpty()) {
+            id.setError("비밀번호를 입력해주세요.");
+            focusView = id;
+            cancel = true;
+        } else if (!isPasswordValid(userPwd)) {
+            pw.setError("6자 이상의 비밀번호를 입력해주세요.");
+            focusView = pw;
+            cancel = true;
+        }
+
+        // 이메일의 유효성 검사
+        if (userID.isEmpty()) {
+            id.setError("이메일을 입력해주세요.");
+            focusView = id;
+            cancel = true;
+        }
+
+        // 생년월일 유효성 검사
+        if (userBirth.isEmpty()) {
+            id.setError("생년월일을 입력해주세요.");
+            focusView = id;
+            cancel = true;
+        }
+
+        // 이름의 유효성 검사
+        if (userName.isEmpty()) {
+            name.setError("이름을 입력해주세요.");
+            focusView = name;
+            cancel = true;
+        }
+
+        if (cancel) {
+            focusView.requestFocus();
+        } else {
+            startRegister(new RegisterData(userName, userID, userBirth, userPwd));
+            showProgress(true);
+        }
+    }
+
+    private void startRegister(RegisterData data) {
+        service.userRegister(data).enqueue(new Callback<RegisterResponse>() {
+            @Override
+            public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+                RegisterResponse result = response.body();
+                Toast.makeText(RegisterActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
+                showProgress(false);
+
+                if (result.getCode() == 200) {
+                    finish();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<RegisterResponse> call, Throwable t) {
+                Toast.makeText(RegisterActivity.this, "회원가입 에러 발생", Toast.LENGTH_SHORT).show();
+                Log.e("회원가입 에러 발생", t.getMessage());
+                showProgress(false);
+            }
+        });
+    }
+
+    private boolean isPasswordValid(String password) {
+        return password.length() >= 6;
+    }
+
+    private void showProgress(boolean show) {
+        ProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 }
