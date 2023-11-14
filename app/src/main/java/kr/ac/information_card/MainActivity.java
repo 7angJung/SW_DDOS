@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         content2_TV = (TextView)findViewById(R.id.card_content2);
 
         init_newsletter();
+        //init_jobs_card();
         information_call(information_list, information_id, imageView, title, content1_TV, content2_TV);
     }
 
@@ -80,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void init_newsletter(){
-
         information_add(information_list, "누가 더 똑똑한 두뇌 달았나… 내년 ‘AI 스마트폰’ 쏟아진다", "@drawable/smartphone_ai",
                 "내년부터 인공지능(AI) 스마트폰 시대가 본격적으로 온다!",
                         "삼성전자가 내년 갤럭시S24 시리즈에 AI 기능을 대거 탑재할 예정인 가운데 애플도 내년 아이폰16 시리즈에 AI 기능을 탑재할 것으로 전망된다. 이에 따라 모바일 애플리케이션프로세서(AP) 업체들의 AP 기술 경쟁이 가열되고 있다.\n" +
@@ -280,6 +280,22 @@ public class MainActivity extends AppCompatActivity {
                         "출처 : AI타임스(https://www.aitimes.com)");
     }
 
+    public void init_jobs_card(){
+        content1_TV.setVisibility(View.GONE);
+        information_add(information_list, "응용 소프트웨어 개발자", "@drawable/","",
+                "하는 일 \n"+ "* 각종 응용 소프트웨어를 기획하고 설계하며 개발\n" + "* 게임, 프로그램 등 여러 소프트웨어 프로그램을 개발" + "\n\n" +
+                        "필요역량\n" + "* 프로그래밍 언어에 대한 기본적인 역량\n" + "* 신기술이나 변화에 대해 탐구하고 자기 계발을 갖춘 사람\n" + "* 여러 사람과 함께 협업하여 프로젝트를 진행하므로 다른 사람과 의사소통 능력이나 협업 능력 필요\n" + "\n\n" +
+                        "적성\n" + "* 평소 게임이나 컴퓨터 프로그램에 대해 흥미가 있는 사람 \n" + "* 프로그램 언어를 통해 개발하는 것에 대해 관심이 많은 사람\n");
+        information_add(information_list, "시스템 소프트웨어 개발자", "@drawable/","",
+                "하는 일 \n"+ "* 유닉스, 리눅스, 윈도우 같은 운영체제를 개발 및 평가, 분석\n" + "* 컴퓨터 언어의 컴파일러 개발 및 평가 분석\n" + "* 컴퓨터를 작동시키고 컴퓨터의 활동을 조정하는 제어 시스템을 설계하고 개발\n" + "\n\n" +
+                        "필요역량\n" + "* 컴퓨터 시스템에 대한 전문적 지식과 프로그래밍 능력\n" + "* 논리적이고 분석적인 사고능력\n" + "* 여러 사람과 함께 협업하여 프로젝트를 진행하므로 다른 사람과 의사소통 능력이나 협업 능력 필요\n" + "\n\n" +
+                        "적성\n" + "* 평소에 인터넷, 컴퓨터 소프트웨어, 컴퓨터 작동 등에 관심이 있는 사람 \n" + "* 분석적이고 논리적으로 문제에 다가가는 사람\n");
+        information_add(information_list, "모바일 앱 개발자", "@drawable/","",
+                "하는 일 \n"+ "* 모바일 기기에서 사용되는 소프트웨어인 모바일 앱들을 개발\n" + "\n\n" +
+                        "필요역량\n" + "*사용자의 요구사항을 분석하고 이를 프로그래밍 언어로 제작할 수 있는 수리, 논리력이 필요\n" + "* 빠른 시장 변화의 흐름을 따라갈 수 있는 넓은 시야 필요\n" + "* 여러 사람과 함께 협업하여 프로젝트를 진행하므로 다른 사람과 의사소통 능력이나 협업 능력 필요\n" + "\n\n" +
+                        "적성\n" + "* 평소 모바일 게임, 앱 들의 변화를 잘 알아차리고 불편함이나 개선점을 잘 발견하는 사람 \n" + "* 평소 모바일 앱에 관심이 있는 사람\n");
+
+    }
 
 
 }
