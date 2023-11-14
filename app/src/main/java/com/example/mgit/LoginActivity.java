@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,7 +20,6 @@ public class LoginActivity extends AppCompatActivity {
     private TextView sign, findPwd;
     private Button login;
     private ServiceAPI service;
-    private ProgressBar ProgressView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         sign = (TextView)findViewById(R.id.signin);
         findPwd = (TextView)findViewById(R.id.findPW);
         login = (Button)findViewById(R.id.loginButton);
+        service = RetrofitClient.getClient().create(ServiceAPI.class);
 
         sign.setOnClickListener(v-> {
             Intent intent = new Intent(this, RegisterActivity.class);
@@ -75,7 +74,6 @@ public class LoginActivity extends AppCompatActivity {
             focusView.requestFocus();
         } else {
             startLogin(new LoginData(userID, userPwd));
-            showProgress(true);
         }
     }
 
@@ -83,7 +81,6 @@ public class LoginActivity extends AppCompatActivity {
         service.userLogin(data).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                showProgress(false);
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -92,7 +89,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 Toast.makeText(LoginActivity.this, "로그인 에러 발생", Toast.LENGTH_SHORT).show();
                 Log.e("로그인 에러 발생", t.getMessage());
-                showProgress(false);
             }
         });
     }
@@ -101,7 +97,4 @@ public class LoginActivity extends AppCompatActivity {
         return password.length() >= 6;
     }
 
-    private void showProgress(boolean show) {
-        ProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
-    }
 }

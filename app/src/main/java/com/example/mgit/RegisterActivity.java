@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +26,6 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText name,id,pw,pw2,birth;
     private Button pwcheck, submit;
     private ServiceAPI service;
-    private ProgressBar ProgressView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,8 +92,6 @@ public class RegisterActivity extends AppCompatActivity {
         submit = findViewById(R.id.signupbutton);
         submit.setOnClickListener(v -> {
             attemptRegister();
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
         });
     }
 
@@ -107,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         String userName = name.getText().toString();
         String userID = id.getText().toString();
-        String userBirth = id.getText().toString();
+        String userBirth = birth.getText().toString();
         String userPwd = pw.getText().toString();
 
         boolean cancel = false;
@@ -149,7 +145,6 @@ public class RegisterActivity extends AppCompatActivity {
             focusView.requestFocus();
         } else {
             startRegister(new RegisterData(userName, userID, userBirth, userPwd));
-            showProgress(true);
         }
     }
 
@@ -157,9 +152,9 @@ public class RegisterActivity extends AppCompatActivity {
         service.userRegister(data).enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
                 RegisterResponse result = response.body();
-                Toast.makeText(RegisterActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
-                showProgress(false);
 
                 if (result.getCode() == 200) {
                     finish();
@@ -170,16 +165,11 @@ public class RegisterActivity extends AppCompatActivity {
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
                 Toast.makeText(RegisterActivity.this, "회원가입 에러 발생", Toast.LENGTH_SHORT).show();
                 Log.e("회원가입 에러 발생", t.getMessage());
-                showProgress(false);
             }
         });
     }
 
     private boolean isPasswordValid(String password) {
         return password.length() >= 6;
-    }
-
-    private void showProgress(boolean show) {
-        ProgressView.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 }
