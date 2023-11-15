@@ -4,7 +4,14 @@ public class Information {
     private int information_Id;
     private String title;
     private String ImgSrc;
-    private String content1, content2;
+    private String content1, content2, content3;
+
+    Information(int information_Id, String title, String Imgsrc, String content1){
+        this.information_Id = information_Id;
+        this.title = title;
+        this.ImgSrc = Imgsrc;
+        this.content1 = content1;
+    }
 
     Information(int information_Id, String title, String Imgsrc, String content1, String content2){
         this.information_Id = information_Id;
@@ -12,6 +19,14 @@ public class Information {
         this.ImgSrc = Imgsrc;
         this.content1 = content1;
         this.content2 = content2;
+    }
+    Information(int information_Id, String title, String Imgsrc, String content1, String content2, String contnet3){
+        this.information_Id = information_Id;
+        this.title = title;
+        this.ImgSrc = Imgsrc;
+        this.content1 = content1;
+        this.content2 = content2;
+        this.content3 = content3;
     }
 
     public int getInformation_Id() {
