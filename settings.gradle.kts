@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NoticeButton"
-include(":app")
+rootProject.name = "it newsletter"
+include(":gallerly")
  
