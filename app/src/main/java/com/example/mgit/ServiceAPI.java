@@ -10,4 +10,9 @@ public interface ServiceAPI {
 
     @POST("/user/join")
     Call<RegisterResponse> userRegister(@Body RegisterData data);
+
+    @POST("/career")
+    Call<RegisterResponse> userRegister(@Body CreditData data);
+
+
 }

@@ -96,5 +96,4 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isPasswordValid(String password) {
         return password.length() >= 6;
     }
-
 }
