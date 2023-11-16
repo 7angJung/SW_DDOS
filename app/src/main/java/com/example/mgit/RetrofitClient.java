@@ -7,9 +7,6 @@ public class RetrofitClient {
     private final static String BASE_URL = "http://ec2-15-164-95-163.ap-northeast-2.compute.amazonaws.com:3000/";
     private static Retrofit retrofit = null;
 
-    private RetrofitClient() {
-    }
-
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()

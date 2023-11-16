@@ -61,7 +61,11 @@ public class LoginActivity extends AppCompatActivity {
             pw.setError("6자 이상의 비밀번호를 입력해주세요.");
             focusView = pw;
             cancel = true;
-        }
+        } /*else if(!(userPwd.equals()) {
+            pw.setError("존재하지 않는 아이디이거나 비밀번호가 틀렸습니다.");
+            focusView = pw;
+            cancel = true;
+        }*/
 
         // ID의 유효성 검사
         if (userID.isEmpty()) {
@@ -81,8 +85,14 @@ public class LoginActivity extends AppCompatActivity {
         service.userLogin(data).enqueue(new Callback<LoginResponse>() {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
+                LoginResponse result = response.body();
+
+                if(result.getCode() == 200) {
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(LoginActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
