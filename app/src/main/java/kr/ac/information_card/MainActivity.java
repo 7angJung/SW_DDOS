@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
         title.setText(info.getTitle());
         content1_TV.setText(info.getContent1());
         content2_TV.setText(info.getContent2());
-        content3_TV.setText(info.getContent2());
+        content3_TV.setText(info.getContent3());
     } // 내용 세개인 정보 처리
     
     
@@ -120,8 +120,8 @@ public class MainActivity extends AppCompatActivity {
     } // 왼쪽 화살표 클릭시
 
     public void onHomeButtonClicked(View v){
-
-    }
+        finish();
+    } // 홈 버튼, 이전 화면으로
 
     public void onRightArrowClicked(View v){
         if(information_id >= information_list.size()-1){
@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity {
                 "필요역량\n" + "* 프로그래밍 언어에 대한 기본적인 역량\n" + "* 신기술이나 변화에 대해 탐구하고 자기 계발을 갖춘 사람\n" + "* 여러 사람과 함께 협업하여 프로젝트를 진행하므로 다른 사람과 의사소통 능력이나 협업 능력 필요",
                 "적성\n" + "* 평소 게임이나 컴퓨터 프로그램에 대해 흥미가 있는 사람 \n" + "* 프로그램 언어를 통해 개발하는 것에 대해 관심이 많은 사람");
         information_add(information_list, "시스템 소프트웨어 개발자", "@drawable/","하는 일 \n"+ "* 유닉스, 리눅스, 윈도우 같은 운영체제를 개발 및 평가, 분석\n" + "* 컴퓨터 언어의 컴파일러 개발 및 평가 분석\n" + "* 컴퓨터를 작동시키고 컴퓨터의 활동을 조정하는 제어 시스템을 설계하고 개발",
-                "* 컴퓨터 시스템에 대한 전문적 지식과 프로그래밍 능력\n" + "* 논리적이고 분석적인 사고능력\n" + "* 여러 사람과 함께 협업하여 프로젝트를 진행하므로 다른 사람과 의사소통 능력이나 협업 능력 필요",
+                "필요역량\n"+"* 컴퓨터 시스템에 대한 전문적 지식과 프로그래밍 능력\n" + "* 논리적이고 분석적인 사고능력\n" + "* 여러 사람과 함께 협업하여 프로젝트를 진행하므로 다른 사람과 의사소통 능력이나 협업 능력 필요",
                 "적성\n" + "* 평소에 인터넷, 컴퓨터 소프트웨어, 컴퓨터 작동 등에 관심이 있는 사람 \n" + "* 분석적이고 논리적으로 문제에 다가가는 사람");
         information_add(information_list, "모바일 앱 개발자", "@drawable/","하는 일 \n"+ "* 모바일 기기에서 사용되는 소프트웨어인 모바일 앱들을 개발\n",
                 "필요역량\n" + "*사용자의 요구사항을 분석하고 이를 프로그래밍 언어로 제작할 수 있는 수리, 논리력이 필요\n" + "* 빠른 시장 변화의 흐름을 따라갈 수 있는 넓은 시야 필요\n" + "* 여러 사람과 함께 협업하여 프로젝트를 진행하므로 다른 사람과 의사소통 능력이나 협업 능력 필요",

@@ -20,7 +20,7 @@ public class Information {
         this.content1 = content1;
         this.content2 = content2;
     }
-    Information(int information_Id, String title, String Imgsrc, String content1, String content2, String contnet3){
+    Information(int information_Id, String title, String Imgsrc, String content1, String content2, String content3){
         this.information_Id = information_Id;
         this.title = title;
         this.ImgSrc = Imgsrc;
@@ -49,6 +49,8 @@ public class Information {
         return content2;
     }
 
+    public String getContent3() { return content3; }
+
     public void setInformation_Id(int information_Id) {
         this.information_Id = information_Id;
     }
@@ -68,4 +70,6 @@ public class Information {
     public void setContent2(String content2) {
         this.content2 = content2;
     }
+
+    public void setContent3(String content3) { this.content3 = content3; }
 }
