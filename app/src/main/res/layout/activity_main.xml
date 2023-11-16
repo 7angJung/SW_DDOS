@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C5E5FF"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="구분" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="아침" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="점심" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="저녁" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/monday_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="11/13 \n 월요일" />
+
+                <TextView
+                    android:id="@+id/monday_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/monday_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/monday_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tuesday_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="11/14 \n 화요일" />
+
+                <TextView
+                    android:id="@+id/tuesday_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/tuesday_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/tuesday_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wednesday_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="11/15 \n 수요일" />
+
+                <TextView
+                    android:id="@+id/wednesday_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/wednesday_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/wednesday_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/thursday_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="11/16 \n 목요일" />
+
+                <TextView
+                    android:id="@+id/thursday_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/thursday_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/thursday_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/friday_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="11/17 \n 금요일" />
+
+                <TextView
+                    android:id="@+id/friday_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/friday_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/friday_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/saturday_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="11/18 \n 토요일" />
+
+                <TextView
+                    android:id="@+id/saturday_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/saturday_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/saturday_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/sunday_column"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="11/19 \n 일요일" />
+
+                <TextView
+                    android:id="@+id/sunday_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/sunday_lunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+
+                <TextView
+                    android:id="@+id/sunday_night"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/edge_meal"
+                    android:gravity="center"
+                    android:text="공백" />
+            </TableRow>
+
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
