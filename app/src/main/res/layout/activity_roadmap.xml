@@ -10,49 +10,111 @@
     <TextView
         android:id="@+id/titleText"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="학점 계산 로드맵"
         android:textAlignment="center"
         android:textColor="#00897B"
-        android:textSize="20sp"
-        android:textStyle="normal|bold" />
+        android:textSize="30sp"
+        android:textStyle="normal|bold"
+        android:layout_margin="20dp"/>
 
-    <TextView
-        android:id="@+id/creditText"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="전공" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:text="필수"
+            android:textAlignment="center" />
 
-            <TextView
-                android:id="@+id/textView6"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="전공"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="교양"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="300sp"
-                android:layout_margin="10sp"
-                android:text="TextView"
-                android:background="@drawable/edittext_rounded_corner_rectangle"/>
-        </LinearLayout>
-    </ScrollView>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_rounded_corner_rectangle">
 
-    <TextView
-        android:id="@+id/geText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="교양" />
+                <TextView
+                    android:id="@+id/required"
+                    android:layout_width="wrap_content"
+                    android:layout_height="500dp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </ScrollView>
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="100sp"
-        android:layout_margin="10sp"
-        android:background="@drawable/edittext_rounded_corner_rectangle"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_rounded_corner_rectangle">
+
+                <TextView
+                    android:id="@+id/major"
+                    android:layout_width="wrap_content"
+                    android:layout_height="500dp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_rounded_corner_rectangle" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@drawable/edittext_rounded_corner_rectangle">
+
+                <TextView
+                    android:id="@+id/ge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="500dp"
+                    android:layout_margin="10sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_rounded_corner_rectangle" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -22,9 +22,9 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity {
-    private TextView back;
-    private EditText name,id,pw,pw2,birth;
-    private Button pwcheck, submit;
+    private TextView back,birth;
+    private EditText name,id,pw,pw2;
+    private Button pwcheck,submit;
     private ServiceAPI service;
 
     @Override

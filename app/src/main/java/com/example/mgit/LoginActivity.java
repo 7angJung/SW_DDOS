@@ -29,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
         id = (EditText)findViewById(R.id.editID);
         pw = (EditText)findViewById(R.id.editPassword);
         sign = (TextView)findViewById(R.id.signin);
-        findPwd = (TextView)findViewById(R.id.findPW);
         login = (Button)findViewById(R.id.loginButton);
         service = RetrofitClient.getClient().create(ServiceAPI.class);
 
@@ -54,18 +53,14 @@ public class LoginActivity extends AppCompatActivity {
 
         // 패스워드의 유효성 검사
         if (userPwd.isEmpty()) {
-            id.setError("비밀번호를 입력해주세요.");
-            focusView = id;
+            pw.setError("비밀번호를 입력해주세요.");
+            focusView = pw;
             cancel = true;
         } else if (!isPasswordValid(userPwd)) {
             pw.setError("6자 이상의 비밀번호를 입력해주세요.");
             focusView = pw;
             cancel = true;
-        } /*else if(!(userPwd.equals()) {
-            pw.setError("존재하지 않는 아이디이거나 비밀번호가 틀렸습니다.");
-            focusView = pw;
-            cancel = true;
-        }*/
+        }
 
         // ID의 유효성 검사
         if (userID.isEmpty()) {
@@ -87,11 +82,19 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse result = response.body();
 
-                if(result.getCode() == 200) {
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
+                if (result != null) {
+                    if (result.getCode() == 200) {
+                        // 로그인 성공 처리
+                        Toast.makeText(LoginActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(intent);
+                    } else {
+                        // 로그인 실패 처리
+                        Toast.makeText(LoginActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    Toast.makeText(LoginActivity.this, result.getMessage(), Toast.LENGTH_SHORT).show();
+                    // 서버 응답이 없을 경우 처리
+                    Toast.makeText(LoginActivity.this, "서버 응답 없음", Toast.LENGTH_SHORT).show();
                 }
             }
 

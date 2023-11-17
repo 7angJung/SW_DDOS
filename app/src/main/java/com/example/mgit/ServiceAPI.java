@@ -11,7 +11,4 @@ public interface ServiceAPI {
     @POST("/user/join")
     Call<RegisterResponse> userRegister(@Body RegisterData data);
 
-    @POST("/career")
-    Call<CreditResponse> userCredit(@Body CreditData data);
-
 }

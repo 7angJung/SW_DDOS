@@ -40,7 +40,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
@@ -78,7 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="학년 입력"
+                android:inputType="textPersonName"
+                android:text="학년, 학기 입력"
                 android:textColor="@android:color/holo_blue_dark"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -91,16 +92,35 @@
                 android:hint=" 학년"
                 android:inputType="textPersonName"
                 android:text="" />
+            <TextView
+                android:id="@+id/currentSemester"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:hint=" 학기"
+                android:inputType="textPersonName"
+                android:text="" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="전공 학점과 교양 학점은 반드시 현재 학기에 수강하고 있는 과목들의 학점을 포함한 숫자를 입력하셔야 됩니다."
+                android:breakStrategy="balanced"/>
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/insertButton"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:text="정보 기입"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
-            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 </FrameLayout>
