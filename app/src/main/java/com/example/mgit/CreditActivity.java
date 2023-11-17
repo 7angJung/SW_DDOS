@@ -34,7 +34,7 @@ public class CreditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 PopupMenu popup = new PopupMenu(getApplicationContext(), currentGrade);
-                popup.inflate(R.menu.popup);
+                popup.inflate(R.menu.popup_grade);
                 popup.show();
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
 
@@ -60,21 +60,21 @@ public class CreditActivity extends AppCompatActivity {
             }
         });
 
-        currentGrade.setOnClickListener(new View.OnClickListener() {
+        currentSemester.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(getApplicationContext(), currentGrade);
-                popup.inflate(R.menu.popup);
+                PopupMenu popup = new PopupMenu(getApplicationContext(), currentSemester);
+                popup.inflate(R.menu.popup_semester);
                 popup.show();
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
 
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
-                            case R.id.menu_grade1:
+                            case R.id.menu_semester1:
                                 currentSemester.setText("1");
                                 break;
-                            case R.id.menu_grade2:
+                            case R.id.menu_semester2:
                                 currentSemester.setText("2");
                                 break;
                         }
