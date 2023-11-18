@@ -32,17 +32,19 @@ public class MainActivity extends AppCompatActivity {
         content2_TV = (TextView)findViewById(R.id.card_content2);
         content3_TV = (TextView)findViewById(R.id.card_content3);
 
-        type_check = 2; // 임시 확인용 변수, 1,2로 뉴스레터와 직업 카드를 각각 확인,
+        type_check = 6; // 임시 확인용 변수,
 
-        if (type_check == 0){
+        switch(type_check){
+            case 0:init_capstone_card(); break; // 캡스톤디자인
+            case 1:init_newsletter(); break; // IT 뉴스레터
+            case 2:init_jobs_card(); break; // 직업 소개
+            case 3:init_employee_card(); break; // 채용 공지
+            case 4:init_academic_notice_card(); break; // 학사 공지
+            case 5:init_computer_notice_card(); break; // 컴공 공지
+            case 6:init_haeseong_notice_card(); break; // 해성 공지
+        }
+        information_call(information_list, information_id, imageView, title, content1_TV, content2_TV, content3_TV);
 
-        } else if(type_check == 1){
-            init_newsletter();
-            information_call(information_list, information_id, imageView, title, content1_TV, content2_TV);
-        } else if(type_check == 2) {
-            init_jobs_card();
-            information_call(information_list, information_id, imageView, title, content1_TV, content2_TV, content3_TV);
-        } // 임시로 각 타입별 화면을 구성하기 위한 조건문 설정
     }
 
 
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             information_id--;
-            information_call(information_list, information_id, imageView, title, content1_TV, content2_TV);
+            information_call(information_list, information_id, imageView, title, content1_TV, content2_TV, content3_TV);
         }
 
     } // 왼쪽 화살표 클릭시
@@ -128,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             information_id++;
-            information_call(information_list, information_id, imageView, title, content1_TV, content2_TV);
+            information_call(information_list, information_id, imageView, title, content1_TV, content2_TV, content3_TV);
         }
     } // 오른쪽 화살표 클릭시
 
@@ -461,6 +463,284 @@ public class MainActivity extends AppCompatActivity {
                 "필요역량\n" + "* 통신의 전반적인 흐름과 관련 지식 필요\n" +
                         "* 전력 ICT 관련 지식 및 관련 컴퓨터 지식 필요",
                 "적성\n" + "* 평소 정보통신, 전력 시스템에 대해 관심이 있는 사람");
+
+    }
+
+    public void init_employee_card(){
+        content2_TV.setVisibility(View.GONE);
+        content3_TV.setVisibility(View.GONE);
+        information_add(information_list, "[LG그룹] 비즈테크아이 JAVA/스마트팩토리 신입 인턴 채용[~08.06]", "@drawable/jobnotice1",
+                "채용연계형 인턴\n[담당 업무] 그룹사 내 시스템 개발 및 운영\n\n" +
+                        "[자격 요건]\n학사 이상 기졸업자 및 24년 졸업예정자\n" +
+                        "IT관련 학과 또는 IT교육 이수자\n" +
+                        "-개발언어(Java,C# 등등) 사용가능자\n\n" +
+                        "[우대사항]\n정보처리기사 및 IT 관련 자격증 소지자 IT 공모전 수상자\n\n" +
+                        "근무지: 서울", "", "");
+        information_add(information_list, "에스케이쉴더스(주) 정보보안 관제 신입/경력 채용", "@drawable/jobnotice2",
+                "모집요강\n" +
+                        "부문:보안관제 [담당 업무] 보안 솔루션 운영 및 관리\n\n" +
+                        "[자격요건]\n학력: 전문학사 이상\n" +
+                        "경력:신입 또는 경력 가능\n" +
+                        "원활한 커뮤니케이션 스킬 역량\n\n" +
+                        "[우대사항]\n" +
+                        "IT분야(OA Network 보안 등) HW, SW 지식 및 경험 보유자\n" +
+                        "IT분야 전공 및 자격증 보유자 (정보처리 기사, 보안 자격증 등)", "", "");
+        information_add(information_list, "(주)와이즈덴 채용 공고", "@drawable/jobnotice3",
+                "와이즈덴 모집요강\n" +
+                        "[자격요건]\n학력무관\n\n" +
+                        "[우대사항]\n안드로이드(java) 개발 경험자 우대\n" +
+                        "임베디드 SW 개발 경험자 우대\n" +
+                        "졸업 예정자 지원 가능", "", "");
+        information_add(information_list, "대신정보 통신 채용 관련", "@drawable/jobnotice4",
+                "[자격요건]\n컴퓨터 및 정보통신 관련 학과\n\n" +
+                        "[공통사항]\n1.2023년 2월 졸업예정자\n" +
+                        "2.수습기간 3개월(3개월후 정규직 전환)\n" +
+                        "3.수습기간 월 급여 205만원", "", "");
+        information_add(information_list, "우아한 형제들 직군 채용", "@drawable/jobnotice5",
+                "모집요강\n" +
+                        "부문: 채용전환형 우아한 인턴 공개 채용\n\n" +
+                        "[자격 요건]\n1. 만 19세이상 2. 인턴기간 종료 후 2024년 2월 이전 입사 가능자\n" +
+                        "3.인턴 기간 동안 (23년6월 28일~8월 22일)동안 full tim 근무 가능자\n" +
+                        "4.커리어의 시작을 우아한 형제들과 함께 하고싶은 분", "", "");
+    }
+
+    public void init_computer_notice_card(){
+        content2_TV.setVisibility(View.GONE);
+        content3_TV.setVisibility(View.GONE);
+        information_add(information_list, "2023학년도 공학작품 경진대회 및 작품 전시회 실시 안내", "@drawable/computersciencenotice1",
+                "1. 일시: 2023년 11월 23일(목)\n" +
+                        "2. 장소: 해양공학관 1층 로비\n" +
+                        "3. 내용: 공학작품경진대회 및 작품 전시회\n" +
+                        "4. 관람 대상: 컴퓨터공학과 재학생 전체\n" +
+                        "5. 참가팀 명단/작품명", "", "");
+        information_add(information_list, "연구과제 참여 학생 연구원 모집(김기원 교수)", "@drawable/computersciencenotice2",
+                "연구과제 참여 학생 연구원을 모집합니다. 관심있는 학생은 kwkim@mmu.ac.kr로 연락바라며, 간단한 소개와 연락처를 보내주시기 바랍니다.", "", "");
+        information_add(information_list, "한전kdn 사내전문가 특강 실시 안내", "@drawable/computersciencenotice3",
+                "<한전KDN 사내전문가 특강 실시 안내>\n" +
+                        "일시: 11월 3일(금) 16:00 ~ 18:00\n" +
+                        "장소: 7310호 세미나실\n" +
+                        "강사: 한전KDN 한상호, 이종호 차장\n" +
+                        "특강 내용\n" +
+                        " 1. 한전KDN 미래성장사업 추진 현황 및 기술 동향(한상호 차장)\n" +
+                        " 2. 한전KDN 연구개발 현황 및 기술 동향(이종호 차장) *한전KDN(주)의 전력ICT분야 전문가 분들이 실시하는 특강으로 학생들에게 큰 도움이 될만한\n" +
+                        "강의입니다. *1, 2학년들에게는 전공에 관한 비전이나 아이디어를 도출하는데, 3학년에게는 캡스톤디자인\n" +
+                        "선정을 하는데 큰 도움이 될 강의입니다. 재학생 여러분의 많은 참여 바랍니다.", "", "");
+        information_add(information_list, "2023학년도 아이디어 경진대회 2차 발표 실시 안내(발표팀 포함)", "@drawable/computersciencenotice4",
+                "2023학년도 아이디어 경진대회 2차 발표를 다음과 같이 실시합니다." +
+                        "1. 일시: 2023년 10월 19일(목) 18:30 ~\n" +
+                        "2. 장소: 해양공학관 7310호 세미나실\n" +
+                        "3. 심사내용: 아이디어 경진대회 2차 심사(PPT 발표)\n" +
+                        "4. 심사위원: 컴퓨터공학과 교수\n" +
+                        "5. 2차발표 명단(팀명/주제)\n" +
+                        " - E&D/섬 여행 플랫폼 '고고섬'\n" +
+                        " - 안전뽀숑라이더스/쓩-안전한 킥보드\n" +
+                        " - 정성국/통합사고전달시스템(MEC:Medical Emergency System)\n" +
+                        " - 라때/My Dress Code\n" +
+                        " - 초신성/Walkwise", "", "");
+        information_add(information_list, "컴퓨터 공학과 로고디자인 경진대회 심사 결과", "@drawable/computersciencenotice5",
+                "이번 컴퓨터 공학과 로고디자인 경진대회 심사결과는 이렇게 나왔습니다.", "", "");
+    }
+
+    public void init_haeseong_notice_card(){
+        content2_TV.setVisibility(View.GONE);
+        content3_TV.setVisibility(View.GONE);
+        information_add(information_list, "[육성사업단] 3개 대학 공유 프로그램 \"같생 인문학\" - 숏폼 공모전(내가 찍은 같(god)생 이야기) 안내", "@drawable/mmunotice1",
+                "접수\n" +
+                        "◾ 접수기간 : ~2023.12.10.(일) 23:59분까지\n" +
+                        "◾ 접수방법 : 이메일 접수(gh00144@mmu.ac.kr)\n" +
+                        " - 제출 내용 : 신청서, 개인정보동의서, 숏폼 영상 파일(20~30초)\n" +
+                        "인기투표 및 심사\n" +
+                        "◾ 투표기간 : 2023.12.11.(월)14:00~2023.12.17.(일) 23:59분까지\n" +
+                        "◾ 투표방법 : 유튜브 영상 인기투표(좋아요 및 조회수)\n" +
+                        "◾ 선정기준 : 좋아요+조회수(80), 운영진평가(20)\n" +
+                        "우수작 전시\n" +
+                        "◾ 전시기간 : 2023.12.18.(월)~2023.12.31.(일)\n" +
+                        "◾ 전시장소 : 각 학교별 시상금 지급 및 우수작 전시", "", "");
+        information_add(information_list, "국제학생증 ISIC 발급비지원행사 안내", "@drawable/mmunotice2",
+                "국제학생증 ISIC(International Student Identity Card)은 해외에서 학생 신분을 증명할 수" +
+                        "있으며, 이를 통해 전세계적으로 150,000여 학생 할인 혜택을 이용할 수 있습니다. 1. 발급대상 : 목포해양대학교 재(휴)학생\n" +
+                        "2. 온라인 행사기간 : 2023년 11월17일(금)~11월30일(목)\n" +
+                        " 방문 행사 : 11월21일(화), 학교 교내 (10시~14시)\n" +
+                        "3. 발급절차 :\n" +
+                        " 가. 온라인 신청서 등록 : isic.co.kr/hbr/314009\n" +
+                        " 나. My브랜치 바로가기 클릭\n" +
+                        " 다. 고객확인번호 문자 수신\n" +
+                        " 라. 통장+카드(국제학생증) 또는 카드(국제학생증) 선택 후 발급 신청\n" +
+                        " 마. 카드는 업무일 기준 7일 이내 배송\n" +
+                        "4. 유효기간 : 발급월로부터 1년간 유효\n" +
+                        "5. 발급비용 : 무료 (발급비 17,000원 하나은행 부담)\n" +
+                        "6. 추가제공 : 체크카드 발급후 1만원 이상 사용시 스타벅스 커피 구폰 2매 제공(체크카드 발\n" +
+                        "급 시 마케팅 관련 정보 이용 동의 필요)\n" +
+                        "7. 기타안내 : 첨부된 포스터 참조\n", "", "");
+        information_add(information_list, "2024 도서관의 날 도서관 주제 공모 안내", "@drawable/mmunotice3",
+                "2024년 도서관의 날*도서관주간에 대한 전국민의 관심을 촉진하고 참여를 유도하고자 2024년" +
+                        "공식주제를 다음과 같이 공모하오니 관심있는 학생 및 교직원분들께서는 참여하시기 바랍니다.\n" +
+                        "1. 공모명: 2024 도서관의 날*도서관주간 공식주제 공모\n" +
+                        "2. 응모기간: 2023. 11. 8.(수) ~ 11. 22.(수) 18:00(15일간)\n" +
+                        "3. 공모소재\n" +
+                        "- 도서관의 공공성 및 사회적 가치를 담은 내용\n" +
+                        "- 시대에 부응하는 도서관의 역항을 담은 내용\n" +
+                        "- 도서관의 날 및 도서관 주간 행사에 어울리는 문구\n" +
+                        "4. 참여방법\n" +
+                        "- 링크 접속후 작성 제출\n" +
+                        "- 전국민(개인), 개인당 1편 20자 이내\n" +
+                        "- 우리말 사용 권장, 외래어 사용 지양(외래어 사용 시 심사 제외)\n" +
+                        "5. 관련문의: 한국도서관협회 정책기획팀(02-535-4489)", "", "");
+        information_add(information_list, "(광주전남공동교육혁신센터) ChatGPT 질문대회 안내", "@drawable/mmunotice4",
+                "ChatGPT 질문대회는 주어진 질문을 기반으로 학생들이 ChatGPT를 활용해 질문을 넣고 답" +
+                        "을 얻어 가는 과정을 평가합니다. 또한, 올바른 정답을 찾기 위한 창의적이고 정확한 질문의 " +
+                        "내용 평가도 함께 이루어집니다. 더불어 이를 기반으로 질문에 대한 자신의 생각을 한편의 글" +
+                        "로 완성해서 평가받습니다.", "", "");
+        information_add(information_list, "목포해양대학교 영상물공모전 제5회 MMU Story 안내", "@drawable/mmunotice5",
+                "분야:ucc,사진\n" +
+                        "참가 자격 교직원, 재학생 및 졸업생, 대학 역사 관련 기록을 보유한 지역민등\n" +
+                        "출품 작품수 1인당 UCC 영상 분야-1건, 사진분야 최소 2점이상", "", "");
+        information_add(information_list, "2023학년도 2학기 노트필기 공모전 모집 안내(~12/21)", "@drawable/mmunotice6",
+                "지원자격\n" +
+                        "2023학년도 2학기 교과목을 수강하며, 자신이 기록한 필기 자료를 뽐내고 싶은 재학생\n" +
+                        "* 휴학생, 대학원생 지원 불가\n" +
+                        "* 타 대학 수강 교과목 및 대학 이러닝 기반 학점 인정 교과목 제외\n" +
+                        "모집인원\n" +
+                        "최소 30명\n" +
+                        "* 최소 인원이 모집되지 않았을 경우, 기간 연장 또는 공모전을 취소 할 수 있음", "", "");
+        information_add(information_list, "[공대생활관]2023학년도 동계방학 중 해양공과대학생 공대생활관 이용자 모집 일정 변경 안내", "@drawable/mmunotice7",
+                "지원자격\n" +
+                        "[공대생활관]2023학년도 동계방학 중 해양공과대학생 공대생활관 이용자 모집 일정 변경 안내\n" +
+                        "해양공과대학 재학생 ❍ 입관신청의 제한 - 전염성 질환자 또는 보균자 - 공대생활관에서 강" +
+                        "제퇴관을 당한 자 또는 유기정학 이상의 징계를 받은 자 - 휴학생 및 그 밖에 운영위원회에" +
+                        "서 부적당하다고 인정한 자", "", "");
+    }
+
+    public void init_academic_notice_card(){
+        content2_TV.setVisibility(View.GONE);
+        content3_TV.setVisibility(View.GONE);
+        information_add(information_list, "2023학년도 겨울 계절학기 수강신청 안내(본교)_교과목 추가 개설", "@drawable/academicnotice1",
+                "1. 수업기간: 2023. 12. 22.(금) ~ 2024. 1. 12.(금)\n" +
+                        " ※ 현장실습 교과목은 4주간 운영\n" +
+                        "2. 수강신청기간: 2023. 11. 20.(월) - 11. 24.(금)", "", "");
+        information_add(information_list, "2023학년도 인천대학교 동계 계절학기 수학 안내", "@drawable/academicnotice2",
+                "- 추천기한: 2023.11. 23.(목) 16:00\n" +
+                        "- 수업기간: 2023. 12. 22.(금) ~ 2024. 1. 11.(목)\n" +
+                        "- 수강신청: 2023. 11. 28.(화) 10:00 ~ 11. 30.(목) 16:00\n" +
+                        "- 수강가능학점 : 6학점 이내\n" +
+                        "- 기타문의: 각 학부과로 문의 바람", "", "");
+        information_add(information_list, "강릉원주대학교 동계 계절학기 수학 안내", "@drawable/academicnotice3",
+                "1. 추천기한: 2023.11.17.(금)까지\n" +
+                        "2. 신청학점: 6학점 이내.\n" +
+                        "3. 수업기간: 2023.12.26.(화) ~ 2024.1.16.(화) 【15일간】\n" +
+                        "※ 토,일 및 공휴일 제외\n" +
+                        "4. 수강신청: 11.21.(화) 10:00~11.27.(월)18:00\n" +
+                        "5. 문의: 각 학부과 사무실로 문의 바람", "", "");
+        information_add(information_list, "2024학년도 전학 전부 전과 선발 공고", "@drawable/academicnotice4",
+                "2024학년도 전학·전부 ·전과 신청자를 첨부파일과 같이 선발하오니 기한내에 신청하시기 바랍니다.\n" +
+                        "※ 전학.전부.전과 지원서는 서명을 모두 득한 후 학생이 직접 교무처에 제출해주세요.\n" +
+                        "※ 건강진단서는 최종 선발결과에 따라 별도 제출 요청할 예정이므로 지원서 제출시 건강진단서는 제출 불필요합니다", "", "");
+        information_add(information_list, "2024학년도 1학기 대학 재입학생 선발 공고", "@drawable/academicnotice5",
+                "2024학년도 1학기 재입학 신청자를 첨부파일과 같이 선발하오니 기한내에 신청하시기 바랍니다.", "", "");
+        information_add(information_list, "2023학년도 광주여자대학교 동계 계절학기 수학 안내", "@drawable/academicnotice6",
+                "가. 추천기한:2023. 11. 9.(목)까지(※ 남 여 구분없이 수강신청 가능함)\n" +
+                        "나. 수업기간: 2023. 12. 26.(화)~1. 30.(화)까지(해당 수업요일 및 시간 / 5주\n" +
+                        "다. 수강신청학점: 최대 5학점\n" +
+                        "라. 수 강 료: 학점당 50,000원\n" +
+                        "마. 납부기간: 2023. 11. 28.(화)~11. 30.(목)\n" +
+                        "바. 기타문의: 각 학부과 사무실", "", "");
+        information_add(information_list, "2023학년도 한국해양대 동계 계절학기 수학 안내", "@drawable/academicnotice7",
+                "1. - 수업기간: 2023. 12. 26.(화) ~ 2024. 1. 16.(화) [3주간, 월 ~ 금 매일 수업]\n" +
+                        " - 수강신청기간: 2023. 11. 14.(화) 10:00 ~ 11. 16.(목) 23:59\n" +
+                        " - 납부기간: 2023. 12. 4.(월) ~ 12. 6.(수) (납부 가능시간: 09:00 ~ 16:00)\n" +
+                        "2. 지원자격: 우리 대학교와 학술교류협정을 체결한 대학의 재학생으로 소속 대학교 총장의 추천을 받은 자\n" +
+                        " ※ 2023. 11. 8.(수)까지 추천\n" +
+                        "3. 개설 교과목 및 수업시간표: [붙임] 강의개설 예정교과목 현황 참조\n" +
+                        "4. 신청학점: 6학점 이내\n" +
+                        "5. 기타문의: 각 학부과 사무실", "", "");
+
+    }
+
+    public void init_capstone_card(){
+        content3_TV.setVisibility(View.GONE);
+        information_add(information_list, "DO!", "@drawable/capstone01",
+                "작품 개요: 최근 이슈인 장애인 이동권 보장 시위 관련 기사와 사회적 약자의 대중교통 이용에" +
+                        "어려움이 많다는 통계를 보고 장애인의 사회적, 심리적 격차를 줄이고자 버스 이용이 불편한" +
+                        "시각, 지체 장애인을 위한 버스 승하차를 도와주는 애플리케이션을 제작하게 되었다.",
+                "작품 목적: 시각 장애인의 경우 음성으로 출발지와 목적지를 입력하면 목적지까지의 버스 리스트를" +
+                        "검색할 수 있고 정류장에 도착하는 탑승할 가장 빠른 버스에 알림을 보낼 수 있다. 지체 장애" +
+                        "인의 경우 저상버스의 잔여 좌석을 확인하여 기사에게 알림을 보냄으로써 기사가 인지하기 쉽" +
+                        "게 한다. 위와 같은 기능들을 통해 버스 알림 시스템을 계획하였으며 장애인들의 버스 사용에" +
+                        "대한 거리감을 줄이고 사회 구성원으로서 인권을 보장받게 하고자 한다.", "");
+        information_add(information_list, "히트다 히트", "@drawable/capstone02",
+                "작품 개요: 이 앱에서는 물고기 사진으로 이름과 크기를 판별하여 독성여부, 물고기들이 선호" +
+                        "하는 미끼, 제철,낚싯대의 종류,포인트,영양성분 등 유용한 정보를 제공합니다. ",
+                "작품 목적: 낚시하는 사람들에게 빠르게 정보를 제공하고, 다양한 물고기들의 정보들을 판별하여" +
+                        "낚시행위에 도움이 될 수 있게 앱을 제공합니다", "");
+        information_add(information_list, "언택트", "@drawable/capstone03",
+                "작품 개요: 바이러스로 인한 감염을 예방할 뿐만 아니라, 드라이브 쓰루의 회전율이 낮은 단점" +
+                        "을 보안하기 위해 드라이브 쓰루용 키오스크를 만들었습니다.",
+                "작품 목적: 드라이브 쓰루의 회전율을 높여서 효율성을 올릴 뿐만 아니라 , 직원이 필요하지 않은" +
+                        "상황을 만들어 인건비를 절약하기 위하여 만들었습니다.", "");
+        information_add(information_list, "안타르티카(방치형 게임)", "@drawable/capstone04",
+                "작품 개요: 사용자가 개입하지 않고 성장하며 플레이하는 게임으로, " +
+                        "플레이를 통해 보상 획득하며 능력치를 성장시킬 수 있고 아이템을 업그레이드 가능\n" +
+                        "스테이지가 올라갈수록 난이도가 증가합니다.",
+                "작품 목적: 흔하게 접할 수 있는 게임을 통해 환경에 대한 경각심을 알리기 위하여 이러한 게임을" +
+                        "만들게 되었습니다.", "");
+        information_add(information_list, "A.S.M.R(Automatic Separating Machine for Recycling garbage)재활용 쓰레기 자동 분리수거 시스템", "@drawable/capstone05",
+                "작품 개요: A.S.M.R(재활용 쓰레기 자동 분리수거 시스템)은 사람들이 많이 사용하는 시설에서" +
+                        "분리수거가 제대로 이루어지지 않는다는 것을 큰 문제점으로 여겨 이를 해결하기 위한 작품입니다.",
+                "작품 목적: A.S.M.R(재활용 쓰레기 자동 분리수거 시스템)의 개발 목적은 쓰레기가 많이 발생하는 " +
+                        "곳에서 분류하지 않고 쓰레기를 한꺼번에담아서 버리면 재활용 쓰레기 처리장에서 사람이 쓰" +
+                        "레기를 직접분리하는 노동과 시간을 줄이기 위한 것입니다.", "");
+        information_add(information_list, "알바톡", "@drawable/capstone06",
+                "작품 개요: 이 플랫폼은 알바생과 점주간에 간단한 방식으로 업무 지시를 내리고 확인 할수 있" +
+                        "게 하며, 점주는 지시를 내리고 확인할 수 있게 하는 기능을 가지고 있습니다.",
+                "작품 목적: 점주는 자신이 업무중이 아니라도 알바생에게 업무를 지시할 수 있고, 알바생은 내" +
+                        "려진 업무를 확인하고 소화하면 되므로 작업의 능률을 증가 시키는 것을 목적으로 가지고 있습니다."
+                        , "");
+        information_add(information_list, "킥보드 가드", "@drawable/capstone07",
+                "작품 개요: 전동 킥보드에 다양한 센서들을 연동하여 사용자에게 안전을 제공합니다",
+                "작품 목적: 카카오맵과 구글파이어베이스 등의 서비스 연동으로 전동킥보드를 이용하는 사용자" +
+                        "에게 여러 가지 편의성을 제공하는 목적을 가지고 있습니다.\n", "");
+        information_add(information_list, "디자인 변경이 가능한 무드등", "@drawable/capstone08",
+                "작품 개요: 21세기를 살아가는 바쁜 현대인의 삶에서 잠은 필수적인 요소이며, 양질의 수면을 " +
+                        "위해 무드등과 같은 다양한 수면용품을 사용합니다.",
+                "작품 목적: 기존의 무드등과 달리 디자인 변경이 가능하고 사용자가 원하는 간단한 글귀, 그" +
+                        "림 출력 가능합니다. 여러 가지 센서를 활용하여 활용도를 높여서 실내의 분위기에 변화를 줄 " +
+                        "수 있습니다.", "");
+        information_add(information_list, "모두의 밀키트 커뮤니티", "@drawable/capstone09",
+                "작품개요: 판매자가 등록한 밀키트의 조리과정을 자신만의 조리법으로 수정하여 커뮤니티에 다" +
+                        "른 사람에게 공유하고, 좋아요가 많은 인기글들을 인기글 탭을 통해 소비자들이나 판매자들에" +
+                        "게 보여주는 기능을가지고 있습니다.",
+                "작품 목적: 밀키트의 조리과정을 공유하여 각자의 취향에 맞게 조리법을 제공해줄 목적을 가지고 있습니다.", "");
+        information_add(information_list, "잊지마(준비물 알림 시스템)", "@drawable/capstone10",
+                "작품 개요: 준비물을 가져갈려고 하는 상황에서 잊는 상황이 발생하는데 그 상황을 해결하기 " +
+                        "위해 만든 앱입니다.",
+                "작품 목적: 건망증으로 인해 생기는 불편함을 보조하고, 쉽게 사용 가능할 수 있는 목적을 가지고 있습니다.", "");
+        information_add(information_list, "진로 탐색", "@drawable/capstone11",
+                "작품 개요: 컴퓨터공학에 관심있는 학생들이 진로에 고민이 있기 때문에 vr기기를 활용하여 " +
+                        "진로탐색을 흥미롭게 진로를 탐색할수 있게 합니다.",
+                "작품 목적: 컴퓨터공학과 재학생이 갖고있는 진로 고민을 vr을 활용해 손쉽게 접근하고, 진로" +
+                        "를 알려줄 수 있는 목적을 가지고 있습니다.", "");
+        information_add(information_list, "스마트폰 외관 검사 시스템", "@drawable/capstone12",
+                "작품 개요: 스마트폰을 이용하여 중고 스마트폰의 액정상태를 파악하고 되팔기를 할 경우나 구" +
+                        "매할 경우 스마트폰의 사진만을 이용하여 스마트폰 액정의 등급 상태를 쉽게 파악할 수 있는 " +
+                        "프로그램입니다.",
+                "작품 목적: 액정상태를 파악하여 액정의 등급 상태를 손쉽게 알아내고, 구매 여부와 , 되팔기 " +
+                        "여부를 결정하기 위한 목적을 가지고 있습니다.", "");
+        information_add(information_list, "스스로 학습하는 얼굴인식 도어락", "@drawable/capstone13",
+                "작품 개요:스스로 학습하는 얼굴인식 도어락은 기존얼굴인식의 단점으로 지목되었던, 사옹자의 " +
+                        "얼굴 변화에 따른 인식물에 대한 문제점을 극복하고자 사용자의 얼굴 변화를 도어락이 스스로 " +
+                        "학습하게 합니다",
+                "작품 목적: 많은 양의 학습데이터를 토대로 정합도를 높이면서 오류를 최소화 하는 것을 목표로 한 도어락입니다.", "");
+        information_add(information_list, "드론 배달 시스템", "@drawable/capstone14",
+                "작품 개요: 중국에 스타벅스의 배달 기능을 보게 되었는데, 드론 배송에 흥미가 생겨 직접 배달" +
+                        "이 되는 드론을 만들고자 하여 만들게 되었습니다.",
+                "작품 목적: 국내에 상용화되지 않은 드론 배달 기술을 도입하여 기존 라이더를 통한 배달 시스" +
+                        "템에서 라이더가 아닌 드론을 통하여 신속하게 배달 해주는 것을 목표로 가지고 있습니다.", "");
+        information_add(information_list, "e-편한 귀가 시스템", "@drawable/capstone15",
+                "작품개요: 학교와 학원에 등하교 하는 어린이, 밤에 홀로 운동하는 자녀들, 늦은 밤 퇴근하는" +
+                        "여성 등 여러상황에서 보호자들은 피보호자의 안전을 걱정합니다. 그래서 이러한 점을 방지하" +
+                        "기 위해서 피보호자의 위치정보를 보호자에게 전송하여 안심귀가를 시킬수 있는 어플입니다.",
+                "작품 목적: 실시간 위치 정보를 원하는 보호자에게 전송하여 사용자의 안심귀가를 지원하고 실" +
+                        "시간 위치 정보를 원하는 보호자에게 전송하여 보호자에게 안심을 주는 목적을 가지고 있습니다.", "");
 
     }
 
