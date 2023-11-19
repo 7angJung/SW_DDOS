@@ -126,8 +126,8 @@ public class CustomClassActivity extends AppCompatActivity {
                 class5.setText("");
                 break;
             case "H":
-                class1.setText("전력 계통 자동화");
-                class2.setText("전력 ICT 네트워크");
+                class1.setText("전력 ICT 네트워크");
+                class2.setText("");
                 class3.setText("");
                 class4.setText("");
                 class5.setText("");
@@ -208,47 +208,47 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual2.requestLayout();
                          break;
                      case "F":
-                         manual.setText("\n\n" +
-                                 "교과목 소개\n" +
+                         manual.setText("*임베디드 및 시스템 설계\n\n" +
+                                 "교과목 소개\n컴퓨터공학 엔지니어로서 마이크로컨트롤러의 활용에 대한 실무능력을 배양하는 것을 목표로 한다. AVR 계열의 마이크로컨트롤러를 중심으로 직병렬 I/O포트, 인터럽트, 타이머/카운터, Display 등에 대한 다양한 프로젝트를 수행하고 응용분야에 필요한 주변회로의 설계 제작과 프로그램을 학습한다." +
                                  "\n" +
                                  "적합한 이유 \n");
                          manual.requestLayout();
-                         submanual.setText("강의정보\n\n- 이론형 수업\n-  수업\n" +
-                                 "- 팀플레이 유무 : \n" +
+                         submanual.setText("강의정보\n\n- 실습형 수업\n-  프로젝트형 수업\n" +
+                                 "- 팀플레이 유무 : 있음\n" +
                                  "- 과제 형식 : \n");
                          submanual.requestLayout();
                          submanual2.setText("@ \n@");
                          submanual2.requestLayout();
                          break;
                      case "G":
-                         manual.setText("\n\n" +
-                                 "교과목 소개\n" +
+                         manual.setText("*웹 프로그래밍 및 실습\n\n" +
+                                 "교과목 소개\n웹 프로그래밍에 필요한 프런트엔드 기초 기술을 다룬다. HTML5, CSS3, 자바 스크립트의 사용법을 배우고, 그들을 조합하여 웹 프로그램을 완성하는 방법을 학습한다." +
                                  "\n" +
-                                 "적합한 이유 \n");
+                                 "적합한 이유 \n 프런트엔드에 대한 기초지식을 학습할 수 있고, 자신만의 사이트를 만들어보며 웹 개발에 대한 연습을 할 수 있음 ");
                          manual.requestLayout();
-                         submanual.setText("강의정보\n\n- 이론형 수업\n-  수업\n" +
-                                 "- 팀플레이 유무 : \n" +
-                                 "- 과제 형식 : \n");
+                         submanual.setText("강의정보\n\n- 실습형 수업\n" +
+                                 "- 팀플레이 유무 : 없음\n" +
+                                 "- 과제 형식 : 강의별 과제를 통한 예복습\n");
                          submanual.requestLayout();
-                         submanual2.setText("@ \n@");
+                         submanual2.setText("@ 웹 개발이 생각보다 재미있어요 \n@ 프런트엔드 개발에 관심이 있다면 무조건 들어야하는 과목");
                          submanual2.requestLayout();
                          break;
                      case "H":
-                         manual.setText("\n\n" +
-                                 "교과목 소개\n" +
+                         manual.setText("*스마트 전력 ICT 개론\n\n" +
+                                 "교과목 소개\n전력ICT는 전력 기술에 정보통신 기술을 융복합화 하여 전력 기기와 전력 시스템을 디지털화, 지능화하고, 이를 통해 전력 공급의 신뢰도 향상, 전력 품질 개선, 전기화재 비율 감소, 전력 거래의 활성화, 대규모 수용가 중심의 전기 절약 등을 도모하기 위한 기술이다. 본 강의는 발전, 변전, 송전, 배전, 전력판매, 전력거래, 전력보안, 전력정보시스템 등의 전력계통과 이와 관련된 ICT 기술을 소개함으로써, 전력 ICT 분야에 대한 폭넓은 기초 지식을 갖추도록 하는데 그 목적이 있다. " +
                                  "\n" +
-                                 "적합한 이유 \n");
+                                 "적합한 이유 \n 실제 한전 kdn에서 실무를 뛰고 있는 전문가들의 수준높은 강의를 들을 수 있고, 전력 ICT 분야에 기술 뿐만 아니라 한전 kdn에 대해서도 질문하고 알아볼 수 있는 좋은 기회이다.");
                          manual.requestLayout();
-                         submanual.setText("강의정보\n\n- 이론형 수업\n-  수업\n" +
-                                 "- 팀플레이 유무 : \n" +
-                                 "- 과제 형식 : \n");
+                         submanual.setText("강의정보\n\n- 이론형 수업\n" +
+                                 "- 팀플레이 유무 : 없음\n" +
+                                 "- 과제 형식 : 없음\n");
                          submanual.requestLayout();
-                         submanual2.setText("@ \n@");
+                         submanual2.setText("@ 한전 취업에 관심이 있다면 무조건 들어야 하는 강의\n@ 실제 현장에서 뛰고 있는 전문가들의 강의여서 더욱더 잘 설명해주시는거 같아요");
                          submanual2.requestLayout();
                          break;
                      case "I":
-                         manual.setText("\n\n" +
-                                 "교과목 소개\n" +
+                         manual.setText("영상처리\n\n" +
+                                 "교과목 소개\n 2차원 디지털 영상처리의 기본 개념과 그 이론을 이해하고 실제적으로 응용할 수 있는 능력을 배양함을 목표로 한다. 이를 위하여 영상의 표현, 잡음 제거, 명암 대조 개선, 히스토그램 분석 등의 화질 개선 분야, 이진화, 영상 분할, 영상 표현 등의 영상 특징 추출 분야, 영상 해석을 포함하는 영상 이해 분야, 그리고 주파수 도메인의 영상 처리, 비디오 압축, 움직임 추정 등의 주제를 학습한다." +
                                  "\n" +
                                  "적합한 이유 \n");
                          manual.requestLayout();
@@ -302,16 +302,67 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual2.requestLayout();
                         break;
                     case "D":
+                        manual.setText("\n\n" +
+                                "교과목 소개\n " +
+                                "\n" +
+                                "*적합한 이유 \n");
+                        manual.requestLayout();
+                        submanual.setText("*강의정보\n\n- 형 수업\n" +
+                                "- 팀플레이 유무 : 없음\n" +
+                                "- 과제 형식 : 강의별 과제를 통한 예복습\n");
+
                         break;
                     case "E":
+                        manual.setText("데이터 분석 및 실습\n\n" +
+                                "교과목 소개\n데이터 분석은 데이터에서 의미 있는 패턴과 통찰을 획득하여 의사결정을 지원하기 위한 기술이다. 이 과목은 데이터 수집, 가공, 분석, 시각화 등 데이터를 효과적으로 다룰 수 있는 방법들을 학습하여 실제 데이터 분석에 활용 할 수 있는 능력을 키우는데 그 목적이 있다. " +
+                                "\n" +
+                                "*적합한 이유 \n 데이터 분석의 기초를 다질 수 있고, 데이터 분석이란 분야의 전반적인 흐름을 알 수 있다.");
+                        manual.requestLayout();
+                        submanual.setText("*강의정보\n\n- 실습형 수업\n" +
+                            "- 팀플레이 유무 : 없음\n" +
+                            "- 과제 형식 : 주차별 과제를 통한 예복습\n");
+                        submanual.requestLayout();
+                        submanual2.setText("@ 좀 어려운 과목이지만 실습이 재밌습니다.\n@ 책을 잘 읽고 실습을 진행해야 어려움이 없어요" );
+                        submanual2.requestLayout();
                         break;
                     case "F":
+                        manual.setText("\n\n" +
+                                "교과목 소개\n " +
+                                "\n" +
+                                "*적합한 이유 \n");
+                        manual.requestLayout();
+                        submanual.setText("*강의정보\n\n- 형 수업\n" +
+                                "- 팀플레이 유무 : 없음\n" +
+                                "- 과제 형식 : 강의별 과제를 통한 예복습\n");
                         break;
                     case "G":
+                        manual.setText("웹 프로그래밍 응용 및 실습\n\n" +
+                                "교과목 소개\n웹 프로그래밍을 위한 백엔드 기술인 PHP와, 자바 스크립트 라이브러리인 JQuery 프로그래밍 기법을 학습한다. PHP를 통해 서버 사이드 프로그램의 기능과 데이터베이스 연동 방법을 학습하고, JQuery를 통해 애니메이션과 이펙트, DOM 다루기, 객체, 함수의 활용법을 학습한다. " +
+                                "\n" +
+                                "*적합한 이유 \n 백엔드에 대해 전반적인 느낌을 배울 수 있고, 서버와 프로그램이 통신하는 문법에 대한 기초를 배울 수 있다.");
+                        manual.requestLayout();
+                        submanual.setText("*강의정보\n\n- 형 수업\n" +
+                                "- 팀플레이 유무 : 없음\n" +
+                                "- 과제 형식 : 강의별 과제를 통한 예복습\n");
                         break;
                     case "H":
+                        manual.setText("\n\n" +
+                                "교과목 소개\n " +
+                                "\n" +
+                                "*적합한 이유 \n");
+                        manual.requestLayout();
+                        submanual.setText("*강의정보\n\n- 형 수업\n" +
+                                "- 팀플레이 유무 : 없음\n" +
+                                "- 과제 형식 : 강의별 과제를 통한 예복습\n");
                         break;
-                    case "I":
+                    case "I":manual.setText("차세대 컴퓨팅 세미나\n\n" +
+                            "교과목 소개\n 4차 산업 혁명과 관련된 스마트 기술에 대해 학습한다. 인공지능, 빅데이터, IoT, 블록체인, VR/AR/MR/XR, 자율자동차, 스마트홈/스마트팩토리/스마트헬스케어, 3D 프린터, 드론 등의 최신 기술의 기본 개념과 특징들을 학습함으로써 미래 사회에 필요한 기술들을 이해하고 활용하는 방법을 배운다." +
+                            "\n" +
+                            "*적합한 이유 \n미래기술들을 알아볼수 있고 다양한 분야에 기본적인 지식을 배우면서 분야에 대한 호기심과 지식을 한번에 배울 수 있다.");
+                        manual.requestLayout();
+                        submanual.setText("*강의정보\n\n- 이론형 수업\n" +
+                                "- 팀플레이 유무 : 없음\n" +
+                                "- 과제 형식 : 강의별 과제를 통한 예복습\n");
                         break;
                 }
 
@@ -339,6 +390,15 @@ public class CustomClassActivity extends AppCompatActivity {
                     case "D":
                         break;
                     case "E":
+                        manual.setText("*기계 학습\n\n" +
+                                "*교과목 소개 \n기계학습은 새로운 경험(데이터)을 통해 성능을 향상시켜 나가는 것과 관련한 인공지능 기술이다. 이 과목은 기계학습의 개념과 용어, 회귀, 분류, 군집 등의 주요 알고리즘과 최근 뛰어난 성능을 발휘하고 있는 딥러닝 기술을 이해하고, 이를 문제해결에 활용 할 수 있는 능력을 키우는데 그 목적이 있다." +
+                                "\n" +
+                                "적합한 이유 \n머신러닝과 딥러닝에 기초를 학습하고 실제 사례와 비슷한 상황에서 가정하는 학습을 통해 활용능력을 키울수 있음");
+                        manual.requestLayout();
+                        submanual.setText("*강의 정보\n\n- 실습형 수업(이론 학습후)\n- 팀플레이 유무 : 없음\n- 과제 형식 : 주차별 과제를 통한 예복습\n");
+                        submanual.requestLayout();
+                        submanual2.setText("@ 내용이 어려운 편인거같다\\n@ 새로운 용어에 대한 학습을 하지 않으면 따라갈 수가 없다\"");
+                        submanual2.requestLayout();
                         break;
                     case "F":
                         break;
