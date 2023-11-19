@@ -1,0 +1,2356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserInformActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="5">
+
+        <TextView
+            android:id="@+id/qus1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="1. 나는 소프트웨어 개발에 관심이 있다 (모바일 앱 개발, 게임 프로그램 개발 등)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut1_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut1_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut1_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut1_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="2. 나는 컴퓨터 프로그램이 어떻게 돌아가는지, 어떤 언어로 이루어져 있는지 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut2_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut2_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut2_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut2_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="3. 나는 컴퓨터 보안, 보안 관련 분야에 관심이 있다.(해킹 방어 시스템, 정보보안 등)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup3"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut3_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut3_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut3_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="4. 나는 컴퓨터 네트워크가 무엇인지, 인터넷이 어떻게 연결되는지 몰라도 그게 무엇인지 관심이 있다"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup4"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut4_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut4_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut4_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut4_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="5. 나는 컴퓨터가 어떤 방법으로 정보를 처리하는지에 관해 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut5_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut5_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut5_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut5_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="6. 나는 알파고, CHAT-Gpt 등 인공지능 분야에 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup6"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut6_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut6_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut6_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut6_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut6_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="7. 나는 기계학습, 딥러닝 등 데이터 분석에 대해 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup7"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut7_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut7_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut7_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut7_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut7_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="8. 나는 냉장고나 세탁기 같은 전자제품들이 어떠한 방법으로 작동하는지, 어떤 시스템으로 이루어져 있는지 궁금하다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup8"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut8_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut8_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut8_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut8_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut8_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="9. 나는 디지털 신호나 전기 회로에 대해 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup9"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut9_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut9_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut9_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut9_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut9_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="10. 나는 네이버나 구글 같은 사이트의 홈페이지가 어떤 식으로 개발되는지에 대해 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut10_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut10_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut10_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut10_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut10_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="11. 나는 한국전력공사(KDN)에 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup11"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut11_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut11_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut11_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut11_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut11_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="12. 나는 전력 기기와 전력 시스템에 대해 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup12"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut12_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut12_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut12_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut12_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut12_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="13. 나는 영상을 표현하거나 처리하는 것에 대해 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup13"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut13_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut13_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut13_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut13_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut13_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="14. 관심이 있는 분야 선택(복수 선택 가능)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup14"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <CheckBox
+                android:id="@+id/rBut14_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="앱 개발"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <CheckBox
+                android:id="@+id/rBut14_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="소프트웨어 개발" />
+            <CheckBox
+                android:id="@+id/rBut14_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="컴퓨터 보안" />
+            <CheckBox
+                android:id="@+id/rBut14_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="네트워크" />
+            <CheckBox
+                android:id="@+id/rBut14_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="통신, 서버 관리" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="15. 관심이 있는 분야 선택(복수 선택 가능)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup15"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <CheckBox
+                android:id="@+id/rBut15_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="데이터베이스"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <CheckBox
+                android:id="@+id/rBut15_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="정보 처리" />
+            <CheckBox
+                android:id="@+id/rBut15_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="인공지능" />
+            <CheckBox
+                android:id="@+id/rBut15_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="데이터 분석" />
+            <CheckBox
+                android:id="@+id/rBut15_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="임베디드" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="16. 관심이 있는 분야 선택(복수 선택 가능)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup16"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <CheckBox
+                android:id="@+id/rBut16_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="웹 페이지 개발"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <CheckBox
+                android:id="@+id/rBut16_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="전력 시스템" />
+            <CheckBox
+                android:id="@+id/rBut16_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="전력 네트워크" />
+            <CheckBox
+                android:id="@+id/rBut16_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="영상 처리" />
+            <CheckBox
+                android:id="@+id/rBut16_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="차세대 컴퓨팅" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="17. 나는 나만의 프로그램을 제작해보고 싶다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup17"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut17_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut17_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut17_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut17_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut17_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="18. 나는 해킹 기법, 암호화에 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup18"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut18_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut18_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut18_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut18_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut18_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="19. 나는 인터넷 통신이 문제가 있을 때 문득 정확한 이유와 통신의 원리가 궁금하거나 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup19"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut19_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut19_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut19_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut19_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut19_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="20. 나는 은행이나 도서관 등 기관들이 어떻게 이용자들의 정보를 저장하고 처리하는지에 대해 궁금하거나 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup20"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut20_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut20_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut20_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut20_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut20_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="21.  나는 알파고나 AI 그림, 영상 제작 같은 프로그램들이 어떤 방식으로 구현되는지 궁금하거나 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup21"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut21_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut21_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut21_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut21_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut21_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="22. 나는 하드웨어 시스템이 어떤 원리를 가지고 돌아가는지 궁금하거나 관심이있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup22"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut22_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut22_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut22_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut22_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut22_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="23. 나는 나만의 홈페이지(웹 페이지)를 제작해보고 싶다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup23"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut23_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut23_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut23_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut23_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut23_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="24. 나는 한국전력공사가 무슨 일을 하는지 궁금하거나 관심이 있다. "
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup24"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut24_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut24_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut24_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut24_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut24_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="25. 나는 4차산업과 관련된 기술들에 대해 궁금하거나 관심이 있다.(차컴세)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup25"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut25_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut25_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut25_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut25_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut25_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="26. 희망하는 직업 분야 선택(복수 선택 가능, 미 희망 시, 미선택 가능)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup26"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <CheckBox
+                android:id="@+id/rBut26_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="소프트웨어 개발 관련"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <CheckBox
+                android:id="@+id/rBut26_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보안, 정보보호 관련" />
+            <CheckBox
+                android:id="@+id/rBut26_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="네트워크 관련" />
+            <CheckBox
+                android:id="@+id/rBut26_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="데이터 베이스 관련" />
+            <CheckBox
+                android:id="@+id/rBut26_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="데이터 분석 관련" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="27. 희망하는 직업 분야 선택(복수 선택 가능, 미 희망 시, 미선택 가능)"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup27"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <CheckBox
+                android:id="@+id/rBut27_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="임베디드 관련"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <CheckBox
+                android:id="@+id/rBut27_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="웹개발 관련" />
+            <CheckBox
+                android:id="@+id/rBut27_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="전력 계통 관련" />
+            <CheckBox
+                android:id="@+id/rBut27_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="기타 분야" />
+            <CheckBox
+                android:id="@+id/rBut27_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아직 없음" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="28. 나는 문서나 정보를 분류, 분석 및 정리, 가공하는 것에 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup28"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut28_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut28_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut28_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut28_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut28_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="29. 나는 개발보다는 보안이나 네트워크 통신에 대해 더 관심이 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup29"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut29_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut29_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut29_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut29_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut29_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="30. 나는 기존 시스템을 관리하는 분야보다는 무엇인가 새롭게 개발하는 것을 더 선호한다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup30"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut30_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut30_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut30_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut30_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut30_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="31. 나는 내게 주어진 정보를 분석하고 가공하여 새로운 정보를 찾는 것에 대해 흥미가 있다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup31"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut31_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut31_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut31_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut31_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut31_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="32. 나는 문서나 정보를 저장할 때 체계적이고 논리적으로 정리하는 편이다"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup32"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut32_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut32_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut32_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut32_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut32_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="33. 나는 다양한 문제, 여러 변화를 해결해 나가는 것보단 한 가지 일, 분야를 해결하는 것을 더 선호한다."
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/rGroup33"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut33_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut33_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut33_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut33_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut33_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/qus34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="34. 나는 평소에 물건이나 프로그램 등 새로운 것을 구상해보고 제작하는 것에 흥미가 있다."
+            android:textSize="20sp" />
+
+
+
+        <RadioGroup
+            android:id="@+id/rGroup34"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/rBut34_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton"
+                android:button="@null"
+                android:checked="true"
+                android:text="매우그렇다"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobuttontext" />
+            <RadioButton
+                android:id="@+id/rBut34_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="그렇다" />
+            <RadioButton
+                android:id="@+id/rBut34_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="보통이다" />
+            <RadioButton
+                android:id="@+id/rBut34_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="아니다" />
+            <RadioButton
+                android:id="@+id/rBut34_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radiobutton"
+                android:textColor="@drawable/radiobuttontext"
+                android:button="@null"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="매우아니다" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/testtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="설문제출" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="설문제출" />
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="진로탐색" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+</ScrollView>

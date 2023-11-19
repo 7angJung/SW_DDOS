@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/A"
+        android:title="소프트웨어 개발 분야"/>
+    <item
+        android:id="@+id/B"
+        android:title="정보보안 분야"/>
+    <item
+        android:id="@+id/C"
+        android:title="네트워크 분야"/>
+    <item
+        android:id="@+id/D"
+        android:title="데이터베이스 분야"/>
+    <item
+        android:id="@+id/E"
+        android:title="데이터분석, 인공지능 분야"/>
+    <item
+        android:id="@+id/F"
+        android:title="임베디드 분야"/>
+    <item
+        android:id="@+id/G"
+        android:title="웹개발 분야"/>
+    <item
+        android:id="@+id/H"
+        android:title="전력계통 분야"/>
+    <item
+        android:id="@+id/I"
+        android:title="기타 분야"/>
+
+</menu>

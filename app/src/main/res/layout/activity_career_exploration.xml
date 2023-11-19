@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/madeGray"
+    tools:context=".CareerExplorationActivity">
+
+    <TextView
+        android:id="@+id/careerEx1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/table"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="맞춤형 수업 분석표"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/careerEx2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/table"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="수업 로드맵"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/careerEx3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/table"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="직업 추천"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/careerEx4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/table"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="IT 뉴스레터"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/careerEx5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/table"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="졸업작품, 경진대회 갤러리"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/careerEx6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/table"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="결과 : "
+        android:textSize="20sp" />
+</LinearLayout>
