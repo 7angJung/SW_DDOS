@@ -9,12 +9,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="게시판"
-        android:textSize="32dp"
-        android:textColor="#FFFFFFFF"
+        android:background="#57BCEA"
+        android:gravity="center"
         android:padding="8dp"
-        android:background="#FF3F3F3F"
-        android:gravity="center"/>
+        android:text="메모장"
+        android:textColor="#FFFFFFFF"
+        android:textSize="32dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -26,46 +26,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <Button
-            android:id="@+id/buttonAddItem"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="추가"
-            android:textSize="24dp"
-            android:textColor="#FFFFFFFF"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:backgroundTint="#FF0000FF"
-            android:layout_gravity="center"/>
-        <Button
-            android:id="@+id/buttonDeleteItem"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="삭제"
-            android:textSize="24dp"
-            android:textColor="#FFFFFFFF"
-            android:layout_margin="8dp"
-            android:padding="8dp"
-            android:backgroundTint="#FF0000FF"
-            android:layout_gravity="center"/>
+
         <Button
             android:id="@+id/reg_button1"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:text="글 작성"
-            android:textSize="24dp"
             android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#57BCEA"
             android:padding="8dp"
-            android:backgroundTint="#FF0000FF"
-            />
-
-
-
+            android:text="글 작성"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp" />
     </LinearLayout>
-
 
 </LinearLayout>
