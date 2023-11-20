@@ -25,7 +25,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -35,9 +35,9 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -45,9 +45,9 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -55,9 +55,9 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -72,7 +72,7 @@
 
                 <TextView
                     android:id="@+id/monday_column"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -83,20 +83,20 @@
 
                 <TextView
                     android:id="@+id/monday_morning"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
                     android:text="공백"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/monday_lunch"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -105,9 +105,9 @@
 
                 <TextView
                     android:id="@+id/monday_night"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -121,7 +121,7 @@
 
                 <TextView
                     android:id="@+id/tuesday_column"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -132,20 +132,20 @@
 
                 <TextView
                     android:id="@+id/tuesday_morning"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
                     android:text="공백"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/tuesday_lunch"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -154,9 +154,9 @@
 
                 <TextView
                     android:id="@+id/tuesday_night"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -170,7 +170,7 @@
 
                 <TextView
                     android:id="@+id/wednesday_column"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -181,20 +181,20 @@
 
                 <TextView
                     android:id="@+id/wednesday_morning"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
                     android:text="공백"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/wednesday_lunch"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -203,9 +203,9 @@
 
                 <TextView
                     android:id="@+id/wednesday_night"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -219,7 +219,7 @@
 
                 <TextView
                     android:id="@+id/thursday_column"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -230,20 +230,20 @@
 
                 <TextView
                     android:id="@+id/thursday_morning"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
                     android:text="공백"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/thursday_lunch"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -252,9 +252,9 @@
 
                 <TextView
                     android:id="@+id/thursday_night"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -268,7 +268,7 @@
 
                 <TextView
                     android:id="@+id/friday_column"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -279,20 +279,20 @@
 
                 <TextView
                     android:id="@+id/friday_morning"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
                     android:text="공백"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/friday_lunch"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -301,9 +301,9 @@
 
                 <TextView
                     android:id="@+id/friday_night"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -317,7 +317,7 @@
 
                 <TextView
                     android:id="@+id/saturday_column"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -328,20 +328,20 @@
 
                 <TextView
                     android:id="@+id/saturday_morning"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
                     android:text="공백"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/saturday_lunch"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -350,9 +350,9 @@
 
                 <TextView
                     android:id="@+id/saturday_night"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -366,7 +366,7 @@
 
                 <TextView
                     android:id="@+id/sunday_column"
-                    android:layout_width="50dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0"
                     android:background="@drawable/edge_meal"
@@ -377,20 +377,20 @@
 
                 <TextView
                     android:id="@+id/sunday_morning"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
                     android:text="공백"
-                    android:textSize="13sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/sunday_lunch"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
@@ -399,9 +399,9 @@
 
                 <TextView
                     android:id="@+id/sunday_night"
-                    android:layout_width="117dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="0"
+                    android:layout_weight="1"
                     android:background="@drawable/edge_meal"
                     android:gravity="center"
                     android:padding="2dp"
