@@ -2,6 +2,7 @@ package com.example.onlineboard;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -10,7 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class PostActivity extends AppCompatActivity {
     private Post post; // post 객체
-    private static final int EDIT_POST_REQUEST = 1;
+    private static final int CREATE_POST_REQUEST = 1;
+    private static final int EDIT_POST_REQUEST = 2;
+    private static final int DELETE_POST_REQUEST = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { // 화면 생성
@@ -53,23 +56,16 @@ public class PostActivity extends AppCompatActivity {
                 startActivityForResult(editIntent, EDIT_POST_REQUEST);
                 return true;
 
-            case R.id.action_delete:
-                // 삭제 버튼 클릭 시 처리
-                // 삭제할 데이터를 MainActivity에서 제거하고 화면 갱신
-                MainActivity.testDataSet.remove(post);
-                MainActivity.customAdapter.notifyDataSetChanged();
-                setResult(RESULT_OK, new Intent().putExtra("isPostDeleted", true));
-                finish(); // 현재 화면 종료
-                return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+        Log.d("requestCode","Received requestCode: " + requestCode);
+
         if (requestCode == EDIT_POST_REQUEST && resultCode == RESULT_OK) {
             // 수정이 완료된 경우, 데이터 갱신
             post = (Post) data.getSerializableExtra("updatedPost");

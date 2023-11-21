@@ -38,6 +38,18 @@
             android:text="글 작성"
             android:textColor="#FFFFFF"
             android:textSize="24dp" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#57BCEA"
+            android:padding="8dp"
+            android:text="글 삭제"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"/>
     </LinearLayout>
 
 </LinearLayout>
