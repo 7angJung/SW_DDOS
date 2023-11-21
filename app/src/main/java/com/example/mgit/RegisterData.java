@@ -1,19 +1,27 @@
 package com.example.mgit;
 
-import com.google.gson.annotations.SerializedName;
 
 public class RegisterData {
-    @SerializedName("userName")
     private String userName;
-
-    @SerializedName("userID")
     private String userID;
-
-    @SerializedName("userBirth")
     private String userBirth;
-
-    @SerializedName("userPwd")
     private String userPwd;
+
+    public String getName() {
+        return userName;
+    }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public String getUserBirth() {
+        return userBirth;
+    }
+
+    public String getUserPwd() {
+        return userPwd;
+    }
 
     public RegisterData(String userName, String userID, String userBirth, String userPwd) {
         this.userName = userName;
@@ -21,4 +29,6 @@ public class RegisterData {
         this.userBirth = userBirth;
         this.userPwd = userPwd;
     }
+
+    public RegisterData() {}
 }
