@@ -1650,7 +1650,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="25. 나는 4차산업과 관련된 기술들에 대해 궁금하거나 관심이 있다.(차컴세)"
+            android:text="25. 나는 4차산업과 관련된 기술들에 대해 궁금하거나 관심이 있다."
             android:textSize="20sp" />
 
         <RadioGroup

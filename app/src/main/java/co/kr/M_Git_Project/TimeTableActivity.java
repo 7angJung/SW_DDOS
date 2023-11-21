@@ -3,12 +3,13 @@ package co.kr.M_Git_Project;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.Spinner;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AlertDialog;
@@ -16,6 +17,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class TimeTableActivity extends AppCompatActivity{
     ActivityResultLauncher<Intent> launcher;
+    String ClassName;
+    String professorName;
+    String classroomName;
+    String classTimeName;
+    private TextView classday, classtime;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,10 +79,6 @@ public class TimeTableActivity extends AppCompatActivity{
         TextView fri8 = findViewById(R.id.friday8);
         TextView fri9 = findViewById(R.id.friday9);
 
-        TextView informClassName = findViewById(R.id.className);
-        TextView informProfessor = findViewById(R.id.professorName);
-        TextView informClassRomm = findViewById(R.id.classRoomName);
-
         mon1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,12 +90,983 @@ public class TimeTableActivity extends AppCompatActivity{
                 AlertDialog informdialog = infor.create();
                 infor.show();
 
-                TextView name = findViewById(R.id.className);
-                TextView professor = findViewById(R.id.professorName);
-                TextView classroom = findViewById(R.id.classRoomName);
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
 
             }
+        });
+        mon2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
 
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        mon3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        mon4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        mon5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        mon6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        mon7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        mon8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        mon9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+
+            }
+        });
+        tue1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        tue9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        wen9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        thu9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
+        });
+        fri9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder infor = new AlertDialog.Builder(TimeTableActivity.this);
+                View informView = getLayoutInflater().inflate(R.layout.schedule_inform, null);
+                infor.setTitle("강의정보");
+
+                infor.setView(informView);
+                AlertDialog informdialog = infor.create();
+                infor.show();
+
+                TextView name = informView.findViewById(R.id.className);
+                TextView professor = informView.findViewById(R.id.professorName);
+                TextView classroom = informView.findViewById(R.id.classRoomName);
+                TextView classTime2 = informView.findViewById(R.id.classTime2);
+                name.setText(ClassName);
+                professor.setText(professorName);
+                classroom.setText(classroomName);
+                classTime2.setText(classTimeName);
+
+            }
         });
 
 
@@ -105,47 +1078,88 @@ public class TimeTableActivity extends AppCompatActivity{
                 AlertDialog.Builder mBuilder = new AlertDialog.Builder(TimeTableActivity.this);
                 View mView = getLayoutInflater().inflate(R.layout.addschedule_layout, null);
                 mBuilder.setTitle("강의 정보 추가");
+                Log.d("TimeTableActivity", "mView: " + mView);
+                classday = (TextView)mView.findViewById(R.id.ClassDay);
+                classtime = (TextView)mView.findViewById(R.id.classtime);
+                Log.d("TimeTableActivity", "classday: " + classday);
 
-                //스피너 생성
-                Spinner spinner1 = (Spinner) mView.findViewById(R.id.spinner1);
-                Spinner spinner2 = (Spinner) mView.findViewById(R.id.spinner2);
-
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(TimeTableActivity.this,
-                        android.R.layout.simple_spinner_item,
-                        getResources().getStringArray(R.array.day));
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                // 첫번째 스피너, 요일을 정하는 기능
-                spinner1.setAdapter(adapter);
-                spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                classday.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    public void onClick(View v) {
+                        PopupMenu popup = new PopupMenu(getApplicationContext(), classday);
+                        popup.inflate(R.menu.popup_day);
+                        popup.show();
+                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
 
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                });
-                // 두번째 스피너, 수업시간(몇교시인지)을 정하는 기능
-                ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(TimeTableActivity.this,
-                        android.R.layout.simple_spinner_item,
-                        getResources().getStringArray(R.array.time));
-
-                adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinner2.setAdapter(adapter2);
-                spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item) {
+                                switch (item.getItemId()) {
+                                    case R.id.day1:
+                                        classday.setText("월");
+                                        break;
+                                    case R.id.day2:
+                                        classday.setText("화");
+                                        break;
+                                    case R.id.day3:
+                                        classday.setText("수");
+                                        break;
+                                    case R.id.day4:
+                                        classday.setText("목");
+                                        break;
+                                    case R.id.day5:
+                                        classday.setText("금");
+                                        break;
+                                }
+                                return false;
+                            }
+                        });
                     }
                 });
+                classtime.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        PopupMenu popup = new PopupMenu(getApplicationContext(), classtime);
+                        popup.inflate(R.menu.popup_time);
+                        popup.show();
+                        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item) {
+                                switch (item.getItemId()) {
+                                    case R.id.time1:
+                                        classtime.setText("1교시");
+                                        break;
+                                    case R.id.time2:
+                                        classtime.setText("2교시");
+                                        break;
+                                    case R.id.time3:
+                                        classtime.setText("3교시");
+                                        break;
+                                    case R.id.time4:
+                                        classtime.setText("4교시");
+                                        break;
+                                    case R.id.time5:
+                                        classtime.setText("5교시");
+                                        break;
+                                    case R.id.time6:
+                                        classtime.setText("6교시");
+                                        break;
+                                    case R.id.time7:
+                                        classtime.setText("7교시");
+                                        break;
+                                    case R.id.time8:
+                                        classtime.setText("8교시");
+                                        break;
+                                    case R.id.time9:
+                                        classtime.setText("9교시");
+                                        break;
+                                }
+                                return false;
+                            }
+                        });
+                    }
+                });
+
 
                 mBuilder.setView(mView);
                 AlertDialog dialog = mBuilder.create();
@@ -162,16 +1176,19 @@ public class TimeTableActivity extends AppCompatActivity{
                         TextView professor = mView.findViewById(R.id.editTextTextPersonName2);
                         TextView classroom = mView.findViewById(R.id.editTextTextPersonName3);
 
+                        ClassName = name.getText().toString();
+                        professorName = professor.getText().toString();
+                        classroomName = classroom.getText().toString();
+                        
 
-                        String ClassName = name.getText().toString();
-                        String professorName = professor.getText().toString();
-                        String classroomName = classroom.getText().toString();
-
-                        //스피너 값 변수화
+                        //값 변수화
                         String selectDay = "";
-                        selectDay = (String) spinner1.getAdapter().getItem(spinner1.getSelectedItemPosition());
+                        selectDay = classday.getText().toString();
                         String selectTime = "";
-                        selectTime = (String) spinner2.getAdapter().getItem(spinner2.getSelectedItemPosition());
+                        selectTime = classtime.getText().toString();
+
+                        classTimeName = selectDay+" "+selectTime;
+                        
 
                         //월요일 시간 넣기
                         if ("월".equals(selectDay)&&"1교시".equals(selectTime)) {
@@ -285,6 +1302,12 @@ public class TimeTableActivity extends AppCompatActivity{
                         //informClassRomm.setText(classroom.getText());
                     }
 
+                });
+                closebut.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(getApplicationContext(),ClassName, Toast.LENGTH_SHORT).show();
+                    }
                 });
 
             }

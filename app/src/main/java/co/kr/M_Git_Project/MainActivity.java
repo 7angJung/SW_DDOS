@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton timetable, notification, board, course;
+    String useId;
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -25,10 +26,13 @@ public class MainActivity extends AppCompatActivity {
         notification = (ImageButton)findViewById(R.id.notification);
         board = (ImageButton)findViewById(R.id.board);
         course = (ImageButton)findViewById(R.id.course);
+        Intent intent3 = getIntent();
+        useId = intent3.getStringExtra("ID");
 
 
         timetable.setOnClickListener(v-> {
             Intent intent = new Intent(this, TimeTableActivity.class);
+            intent.putExtra("ID",useId);
             startActivity(intent);
         });
 
@@ -44,7 +48,10 @@ public class MainActivity extends AppCompatActivity {
         course.setOnClickListener(v-> {
             AlertDialog.Builder Dialog = new AlertDialog.Builder(this);
             Intent intent1 = new Intent(this, CareerExplorationActivity.class);
+            intent1.putExtra("ID",useId);
+
             Intent intent2 = new Intent(this, UserInformActivity.class);
+            intent2.putExtra("ID",useId);
             Dialog.setTitle("사용자 정보 확인");
             Dialog.setMessage("진로 탐색을 위한 정보를 수집 하시려면 설문문 버튼을 눌러 주세요\n");
             Dialog.setPositiveButton("진로 탐색 기능", new DialogInterface.OnClickListener() {

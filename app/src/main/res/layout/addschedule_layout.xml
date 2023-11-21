@@ -101,11 +101,15 @@
             android:layout_marginTop="15dp"
             android:text="강의날짜" />
 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="67dp"
-            android:layout_height="54dp"
-            android:layout_marginLeft="30dp" />
+        <TextView
+            android:id="@+id/ClassDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:text="날짜 선택"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -115,11 +119,15 @@
             android:layout_marginTop="15dp"
             android:text="강의시간" />
 
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="67dp"
-            android:layout_height="54dp"
-            android:layout_marginLeft="30dp" />
+        <TextView
+            android:id="@+id/classtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:text="시간 선택"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

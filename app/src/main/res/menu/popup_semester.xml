@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_semester1"
+        android:title="1학기"/>
+
+    <item android:id="@+id/menu_semester2"
+        android:title="2학기"/>
+</menu>

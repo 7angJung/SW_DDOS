@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="@color/madeGray"
     android:orientation="vertical"
-    android:weightSum="3"
     tools:context=".CustomClassActivity">
 
 
@@ -107,18 +106,20 @@
         <TextView
             android:id="@+id/manualtitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
             android:paddingLeft="10dp"
             android:text="강의정보"
             android:textSize="20sp" />
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="0.9"
             android:background="@drawable/table">
 
             <TextView
@@ -126,14 +127,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="0dp"
-                android:paddingTop="15dp"
+                android:paddingTop="5dp"
                 android:paddingBottom="8dp"
                 android:text=" 강의를 눌러주세요!"
                 android:textSize="18sp" />
+
+
         </ScrollView>
+
 
     </LinearLayout>
 
@@ -150,15 +154,6 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/submanualtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingTop="5dp"
-                android:text="세부정보"
-                android:textSize="20sp" />
-
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -166,14 +161,44 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/table">
 
-                <TextView
-                    android:id="@+id/submanual"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="8dp"
-                    android:text="세부정보" />
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_cell"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/submanual"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:text="세부정보"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/submanual2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text="세부정보"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
             </ScrollView>
 
         </LinearLayout>
@@ -202,7 +227,7 @@
                 android:background="@drawable/table">
 
                 <TextView
-                    android:id="@+id/submanual2"
+                    android:id="@+id/submanual3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"

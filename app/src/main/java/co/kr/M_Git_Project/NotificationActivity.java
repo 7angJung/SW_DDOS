@@ -2,6 +2,7 @@ package co.kr.M_Git_Project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -22,24 +23,35 @@ public class NotificationActivity extends AppCompatActivity {
         nofText1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
+                intent.putExtra("type",0);
+                startActivity(intent);
             }
         });
         nofText2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
+                intent.putExtra("type",4);
+                startActivity(intent);
 
             }
         });
         nofText3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
+                intent.putExtra("type",3);
+                startActivity(intent);
 
             }
         });
         nofText4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
+                intent.putExtra("type",5);
+                startActivity(intent);
 
             }
         });
@@ -50,5 +62,6 @@ public class NotificationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }

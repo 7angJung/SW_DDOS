@@ -23,7 +23,6 @@ public class CareerExplorationActivity extends AppCompatActivity {
         career3 = (TextView) findViewById(R.id.careerEx3);
         career4 = (TextView) findViewById(R.id.careerEx4);
         career5 = (TextView) findViewById(R.id.careerEx5);
-        career6 = (TextView) findViewById(R.id.careerEx6);
         Intent intent = getIntent();
 
         int A,B,C,D,E,F,G,H,I;
@@ -110,7 +109,7 @@ public class CareerExplorationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
-                intent.putExtra("type",1);
+                intent.putExtra("type",2);
                 startActivity(intent);
             }
         });
@@ -118,21 +117,16 @@ public class CareerExplorationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
-                intent.putExtra("type",2);
+                intent.putExtra("type",1);
                 startActivity(intent);
             }
         });
         career5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), CustomClassActivity.class);
+                Intent intent = new Intent(getApplicationContext(), NewsActivity.class);
+                intent.putExtra("type",6);
                 startActivity(intent);
-            }
-        });
-        career6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                career6.setText("A값 :"+A+" B값 :"+B+" C값 :"+C+" D값 :"+D+" E값 :"+E+" F값 :"+F+" G값 :"+G+" H값 :"+H+" I값 :"+I);
             }
         });
 

@@ -13,23 +13,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/table"
         android:gravity="center"
         android:padding="15dp"
-        android:text="맞춤형 수업 분석표"
+        android:text="맞춤형 수업 정보"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="↳ 설문조사를 토대로 수업정보와 그래프를 제공"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/careerEx2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/table"
         android:gravity="center"
         android:padding="15dp"
@@ -37,13 +44,21 @@
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="↳ 설문조사를 토대로 수업정보와 그래프를 제공"
+        android:textSize="18sp" />
+
+    <TextView
         android:id="@+id/careerEx3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/table"
         android:gravity="center"
         android:padding="15dp"
@@ -51,13 +66,21 @@
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="↳ 분야별 다양한 IT 직군별 직업 소개"
+        android:textSize="18sp" />
+
+    <TextView
         android:id="@+id/careerEx4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/table"
         android:gravity="center"
         android:padding="15dp"
@@ -65,13 +88,21 @@
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="↳ IT 관련 뉴스를 볼수 있는 뉴스레터"
+        android:textSize="18sp" />
+
+    <TextView
         android:id="@+id/careerEx5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
         android:background="@drawable/table"
         android:gravity="center"
         android:padding="15dp"
@@ -79,16 +110,12 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/careerEx6"
+        android:id="@+id/textView17"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/table"
-        android:gravity="center"
-        android:padding="15dp"
-        android:text="결과 : "
-        android:textSize="20sp" />
+        android:text="↳ 과 선배들의 졸업작품을 볼수 있는 갤러리"
+        android:textSize="18sp" />
+
 </LinearLayout>

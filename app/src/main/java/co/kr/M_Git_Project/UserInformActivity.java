@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -95,19 +96,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId1 != -1) {
                                               switch (selectedId1) {
                                                   case R.id.rBut1_1:
-                                                      Acount += 10;
-                                                      break;
-                                                  case R.id.rBut1_2:
                                                       Acount += 8;
                                                       break;
-                                                  case R.id.rBut1_3:
+                                                  case R.id.rBut1_2:
                                                       Acount += 6;
                                                       break;
-                                                  case R.id.rBut1_4:
+                                                  case R.id.rBut1_3:
                                                       Acount += 4;
                                                       break;
-                                                  case R.id.rBut1_5:
+                                                  case R.id.rBut1_4:
                                                       Acount += 2;
+                                                      break;
+                                                  case R.id.rBut1_5:
+                                                      Acount += 0;
                                                       break;
                                               }
                                           }
@@ -115,19 +116,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId2 != -1) {
                                               switch (selectedId2) {
                                                   case R.id.rBut2_1:
-                                                      Acount += 10;
-                                                      break;
-                                                  case R.id.rBut2_2:
                                                       Acount += 8;
                                                       break;
-                                                  case R.id.rBut2_3:
+                                                  case R.id.rBut2_2:
                                                       Acount += 6;
                                                       break;
-                                                  case R.id.rBut2_4:
+                                                  case R.id.rBut2_3:
                                                       Acount += 4;
                                                       break;
-                                                  case R.id.rBut2_5:
+                                                  case R.id.rBut2_4:
                                                       Acount += 2;
+                                                      break;
+                                                  case R.id.rBut2_5:
+                                                      Acount += 0;
                                                       break;
                                               }
                                           }
@@ -135,19 +136,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId3 != -1) {
                                               switch (selectedId3) {
                                                   case R.id.rBut3_1:
-                                                      Bcount += 10;
-                                                      break;
-                                                  case R.id.rBut3_2:
                                                       Bcount += 8;
                                                       break;
-                                                  case R.id.rBut3_3:
+                                                  case R.id.rBut3_2:
                                                       Bcount += 6;
                                                       break;
-                                                  case R.id.rBut3_4:
+                                                  case R.id.rBut3_3:
                                                       Bcount += 4;
                                                       break;
-                                                  case R.id.rBut3_5:
+                                                  case R.id.rBut3_4:
                                                       Bcount += 2;
+                                                      break;
+                                                  case R.id.rBut3_5:
+                                                      Bcount += 0;
                                                       break;
                                               }
                                           }
@@ -155,19 +156,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId4 != -1) {
                                               switch (selectedId4) {
                                                   case R.id.rBut4_1:
-                                                      Ccount += 10;
-                                                      break;
-                                                  case R.id.rBut4_2:
                                                       Ccount += 8;
                                                       break;
-                                                  case R.id.rBut4_3:
+                                                  case R.id.rBut4_2:
                                                       Ccount += 6;
                                                       break;
-                                                  case R.id.rBut4_4:
+                                                  case R.id.rBut4_3:
                                                       Ccount += 4;
                                                       break;
-                                                  case R.id.rBut4_5:
+                                                  case R.id.rBut4_4:
                                                       Ccount += 2;
+                                                      break;
+                                                  case R.id.rBut4_5:
+                                                      Ccount += 0;
                                                       break;
                                               }
                                           }
@@ -195,19 +196,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId6 != -1) {
                                               switch (selectedId6) {
                                                   case R.id.rBut6_1:
-                                                      Ecount += 10;
-                                                      break;
-                                                  case R.id.rBut6_2:
                                                       Ecount += 8;
                                                       break;
-                                                  case R.id.rBut6_3:
+                                                  case R.id.rBut6_2:
                                                       Ecount += 6;
                                                       break;
-                                                  case R.id.rBut6_4:
+                                                  case R.id.rBut6_3:
                                                       Ecount += 4;
                                                       break;
-                                                  case R.id.rBut6_5:
+                                                  case R.id.rBut6_4:
                                                       Ecount += 2;
+                                                      break;
+                                                  case R.id.rBut6_5:
+                                                      Ecount += 0;
                                                       break;
                                               }
                                           }
@@ -215,19 +216,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId7 != -1) {
                                               switch (selectedId7) {
                                                   case R.id.rBut7_1:
-                                                      Ecount += 10;
-                                                      break;
-                                                  case R.id.rBut7_2:
                                                       Ecount += 8;
                                                       break;
-                                                  case R.id.rBut7_3:
+                                                  case R.id.rBut7_2:
                                                       Ecount += 6;
                                                       break;
-                                                  case R.id.rBut7_4:
+                                                  case R.id.rBut7_3:
                                                       Ecount += 4;
                                                       break;
-                                                  case R.id.rBut7_5:
+                                                  case R.id.rBut7_4:
                                                       Ecount += 2;
+                                                      break;
+                                                  case R.id.rBut7_5:
+                                                      Ecount += 0;
                                                       break;
                                               }
                                           }
@@ -275,19 +276,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId10 != -1) {
                                               switch (selectedId10) {
                                                   case R.id.rBut10_1:
-                                                      Gcount += 10;
+                                                      Gcount += 12;
                                                       break;
                                                   case R.id.rBut10_2:
-                                                      Gcount += 8;
+                                                      Gcount += 10;
                                                       break;
                                                   case R.id.rBut10_3:
-                                                      Gcount += 6;
+                                                      Gcount += 8;
                                                       break;
                                                   case R.id.rBut10_4:
-                                                      Gcount += 4;
+                                                      Gcount += 3;
                                                       break;
                                                   case R.id.rBut10_5:
-                                                      Gcount += 2;
+                                                      Gcount += 1;
                                                       break;
                                               }
                                           }
@@ -295,19 +296,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId11 != -1) {
                                               switch (selectedId11) {
                                                   case R.id.rBut11_1:
-                                                      Hcount += 10;
-                                                      break;
-                                                  case R.id.rBut11_2:
                                                       Hcount += 8;
                                                       break;
-                                                  case R.id.rBut11_3:
+                                                  case R.id.rBut11_2:
                                                       Hcount += 6;
                                                       break;
-                                                  case R.id.rBut11_4:
+                                                  case R.id.rBut11_3:
                                                       Hcount += 4;
                                                       break;
-                                                  case R.id.rBut11_5:
+                                                  case R.id.rBut11_4:
                                                       Hcount += 2;
+                                                      break;
+                                                  case R.id.rBut11_5:
+                                                      Hcount += 0;
                                                       break;
                                               }
                                           }
@@ -315,19 +316,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId12 != -1) {
                                               switch (selectedId12) {
                                                   case R.id.rBut12_1:
-                                                      Hcount += 10;
-                                                      break;
-                                                  case R.id.rBut12_2:
                                                       Hcount += 8;
                                                       break;
-                                                  case R.id.rBut12_3:
+                                                  case R.id.rBut12_2:
                                                       Hcount += 6;
                                                       break;
-                                                  case R.id.rBut12_4:
+                                                  case R.id.rBut12_3:
                                                       Hcount += 4;
                                                       break;
-                                                  case R.id.rBut12_5:
+                                                  case R.id.rBut12_4:
                                                       Hcount += 2;
+                                                      break;
+                                                  case R.id.rBut12_5:
+                                                      Hcount += 0;
                                                       break;
                                               }
                                           }
@@ -335,99 +336,100 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId13 != -1) {
                                               switch (selectedId13) {
                                                   case R.id.rBut13_1:
-                                                      Icount += 10;
+                                                      Icount += 14;
                                                       break;
                                                   case R.id.rBut13_2:
-                                                      Icount += 8;
+                                                      Icount += 11;
                                                       break;
                                                   case R.id.rBut13_3:
-                                                      Icount += 6;
+                                                      Icount += 8;
                                                       break;
                                                   case R.id.rBut13_4:
-                                                      Icount += 4;
+                                                      Icount += 5;
                                                       break;
                                                   case R.id.rBut13_5:
                                                       Icount += 2;
                                                       break;
                                               }
                                           }
-                                          int selectedId14 = rGroup14.getCheckedRadioButtonId();
-                                          if (selectedId14 != -1) {
-                                              switch (selectedId14) {
-                                                  case R.id.rBut14_1:
-                                                      Acount += 6;
-                                                      break;
-                                                  case R.id.rBut14_2:
-                                                      Acount += 5;
-                                                      break;
-                                                  case R.id.rBut14_3:
-                                                      Bcount += 10;
-                                                      break;
-                                                  case R.id.rBut14_4:
-                                                      Ccount += 6;
-                                                      break;
-                                                  case R.id.rBut14_5:
-                                                      Ccount += 5;
-                                                      break;
-                                              }
+                                          CheckBox checkBox14_1 = findViewById(R.id.rBut14_1);
+                                          CheckBox checkBox14_2 = findViewById(R.id.rBut14_2);
+                                          CheckBox checkBox14_3 = findViewById(R.id.rBut14_3);
+                                          CheckBox checkBox14_4 = findViewById(R.id.rBut14_4);
+                                          CheckBox checkBox14_5 = findViewById(R.id.rBut14_5);
+                                          if (checkBox14_1.isChecked()) {
+                                              Acount += 3;
                                           }
-                                          int selectedId15 = rGroup15.getCheckedRadioButtonId();
-                                          if (selectedId15 != -1) {
-                                              switch (selectedId15) {
-                                                  case R.id.rBut15_1:
-                                                      Dcount += 6;
-                                                      break;
-                                                  case R.id.rBut15_2:
-                                                      Dcount += 5;
-                                                      break;
-                                                  case R.id.rBut15_3:
-                                                      Ecount += 6;
-                                                      break;
-                                                  case R.id.rBut15_4:
-                                                      Ecount += 5;
-                                                      break;
-                                                  case R.id.rBut15_5:
-                                                      Fcount += 10;
-                                                      break;
-                                              }
+                                          if (checkBox14_2.isChecked()) {
+                                              Acount += 3;
                                           }
-                                          int selectedId16 = rGroup16.getCheckedRadioButtonId();
-                                          if (selectedId16 != -1) {
-                                              switch (selectedId16) {
-                                                  case R.id.rBut16_1:
-                                                      Gcount += 10;
-                                                      break;
-                                                  case R.id.rBut16_2:
-                                                      Hcount += 6;
-                                                      break;
-                                                  case R.id.rBut16_3:
-                                                      Hcount += 5;
-                                                      break;
-                                                  case R.id.rBut16_4:
-                                                      Icount += 6;
-                                                      break;
-                                                  case R.id.rBut16_5:
-                                                      Icount += 5;
-                                                      break;
-                                              }
+                                          if (checkBox14_3.isChecked()) {
+                                              Bcount += 6;
+                                          }
+                                          if (checkBox14_4.isChecked()) {
+                                              Ccount += 3;
+                                          }
+                                          if (checkBox14_5.isChecked()) {
+                                              Ccount += 3;
+                                          }
+
+                                          CheckBox checkBox15_1 = findViewById(R.id.rBut15_1);
+                                          CheckBox checkBox15_2 = findViewById(R.id.rBut15_2);
+                                          CheckBox checkBox15_3 = findViewById(R.id.rBut15_3);
+                                          CheckBox checkBox15_4 = findViewById(R.id.rBut15_4);
+                                          CheckBox checkBox15_5 = findViewById(R.id.rBut15_5);
+                                          if (checkBox14_1.isChecked()) {
+                                              Dcount += 4;
+                                          }
+                                          if (checkBox14_2.isChecked()) {
+                                              Dcount += 4;
+                                          }
+                                          if (checkBox14_3.isChecked()) {
+                                              Ecount += 3;
+                                          }
+                                          if (checkBox14_4.isChecked()) {
+                                              Ecount += 3;
+                                          }
+                                          if (checkBox14_5.isChecked()) {
+                                              Fcount += 6;
+                                          }
+                                          CheckBox checkBox16_1 = findViewById(R.id.rBut16_1);
+                                          CheckBox checkBox16_2 = findViewById(R.id.rBut16_2);
+                                          CheckBox checkBox16_3 = findViewById(R.id.rBut16_3);
+                                          CheckBox checkBox16_4 = findViewById(R.id.rBut16_4);
+                                          CheckBox checkBox16_5 = findViewById(R.id.rBut16_5);
+                                          if (checkBox14_1.isChecked()) {
+                                              Gcount += 10;
+                                          }
+                                          if (checkBox14_2.isChecked()) {
+                                              Hcount += 4;
+                                          }
+                                          if (checkBox14_3.isChecked()) {
+                                              Hcount += 4;
+                                          }
+                                          if (checkBox14_4.isChecked()) {
+                                              Icount += 6;
+                                          }
+                                          if (checkBox14_5.isChecked()) {
+                                              Icount += 6;
                                           }
                                           int selectedId17 = rGroup17.getCheckedRadioButtonId();
                                           if (selectedId17 != -1) {
                                               switch (selectedId17) {
                                                   case R.id.rBut17_1:
-                                                      Acount += 10;
+                                                      Acount += 5;
                                                       break;
                                                   case R.id.rBut17_2:
-                                                      Acount += 8;
-                                                      break;
-                                                  case R.id.rBut17_3:
-                                                      Acount += 6;
-                                                      break;
-                                                  case R.id.rBut17_4:
                                                       Acount += 4;
                                                       break;
-                                                  case R.id.rBut17_5:
+                                                  case R.id.rBut17_3:
+                                                      Acount += 3;
+                                                      break;
+                                                  case R.id.rBut17_4:
                                                       Acount += 2;
+                                                      break;
+                                                  case R.id.rBut17_5:
+                                                      Acount += 1;
                                                       break;
                                               }
                                           }
@@ -435,19 +437,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId18 != -1) {
                                               switch (selectedId18) {
                                                   case R.id.rBut18_1:
-                                                      Bcount += 10;
-                                                      break;
-                                                  case R.id.rBut18_2:
                                                       Bcount += 8;
                                                       break;
-                                                  case R.id.rBut18_3:
+                                                  case R.id.rBut18_2:
                                                       Bcount += 6;
                                                       break;
-                                                  case R.id.rBut18_4:
+                                                  case R.id.rBut18_3:
                                                       Bcount += 4;
                                                       break;
-                                                  case R.id.rBut18_5:
+                                                  case R.id.rBut18_4:
                                                       Bcount += 2;
+                                                      break;
+                                                  case R.id.rBut18_5:
+                                                      Bcount += 0;
                                                       break;
                                               }
                                           }
@@ -455,19 +457,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId19 != -1) {
                                               switch (selectedId19) {
                                                   case R.id.rBut19_1:
-                                                      Ccount += 10;
+                                                      Ccount += 5;
                                                       break;
                                                   case R.id.rBut19_2:
-                                                      Ccount += 8;
-                                                      break;
-                                                  case R.id.rBut19_3:
-                                                      Ccount += 6;
-                                                      break;
-                                                  case R.id.rBut19_4:
                                                       Ccount += 4;
                                                       break;
-                                                  case R.id.rBut19_5:
+                                                  case R.id.rBut19_3:
+                                                      Ccount += 3;
+                                                      break;
+                                                  case R.id.rBut19_4:
                                                       Ccount += 2;
+                                                      break;
+                                                  case R.id.rBut19_5:
+                                                      Ccount += 1;
                                                       break;
                                               }
                                           }
@@ -495,19 +497,19 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId21 != -1) {
                                               switch (selectedId21) {
                                                   case R.id.rBut21_1:
-                                                      Ecount += 10;
-                                                      break;
-                                                  case R.id.rBut21_2:
                                                       Ecount += 8;
                                                       break;
-                                                  case R.id.rBut21_3:
+                                                  case R.id.rBut21_2:
                                                       Ecount += 6;
                                                       break;
-                                                  case R.id.rBut21_4:
+                                                  case R.id.rBut21_3:
                                                       Ecount += 4;
                                                       break;
-                                                  case R.id.rBut21_5:
+                                                  case R.id.rBut21_4:
                                                       Ecount += 2;
+                                                      break;
+                                                  case R.id.rBut21_5:
+                                                      Ecount += 0;
                                                       break;
                                               }
                                           }
@@ -575,88 +577,87 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId25 != -1) {
                                               switch (selectedId25) {
                                                   case R.id.rBut25_1:
-                                                      Icount += 10;
+                                                      Icount += 12;
                                                       break;
                                                   case R.id.rBut25_2:
-                                                      Icount += 8;
+                                                      Icount += 10;
                                                       break;
                                                   case R.id.rBut25_3:
-                                                      Icount += 6;
+                                                      Icount += 8;
                                                       break;
                                                   case R.id.rBut25_4:
-                                                      Icount += 4;
+                                                      Icount += 6;
                                                       break;
                                                   case R.id.rBut25_5:
                                                       Icount += 2;
                                                       break;
                                               }
                                           }
-                                          int selectedId26 = rGroup26.getCheckedRadioButtonId();
-                                          if (selectedId26 != -1) {
-                                              switch (selectedId26) {
-                                                  case R.id.rBut26_1:
-                                                      Acount += 8;
-                                                      break;
-                                                  case R.id.rBut26_2:
-                                                      Bcount += 8;
-                                                      break;
-                                                  case R.id.rBut26_3:
-                                                      Ccount += 8;
-                                                      break;
-                                                  case R.id.rBut26_4:
-                                                      Dcount += 8;
-                                                      break;
-                                                  case R.id.rBut26_5:
-                                                      Ecount += 8;
-                                                      break;
-                                              }
+                                          CheckBox checkBox26_1 = findViewById(R.id.rBut26_1);
+                                          CheckBox checkBox26_2 = findViewById(R.id.rBut26_2);
+                                          CheckBox checkBox26_3 = findViewById(R.id.rBut26_3);
+                                          CheckBox checkBox26_4 = findViewById(R.id.rBut26_4);
+                                          CheckBox checkBox26_5 = findViewById(R.id.rBut26_5);
+                                          if (checkBox26_1.isChecked()) {
+                                              Acount += 6;
                                           }
-                                          int selectedId27 = rGroup27.getCheckedRadioButtonId();
-                                          if (selectedId27 != -1) {
-                                              switch (selectedId27) {
-                                                  case R.id.rBut27_1:
-                                                      Fcount += 8;
-                                                      break;
-                                                  case R.id.rBut27_2:
-                                                      Gcount += 8;
-                                                      break;
-                                                  case R.id.rBut27_3:
-                                                      Hcount += 8;
-                                                      break;
-                                                  case R.id.rBut27_4:
-                                                      Icount += 8;
-                                                      break;
-                                                  case R.id.rBut27_5:
-                                                      break;
-                                              }
+                                          if (checkBox26_2.isChecked()) {
+                                              Bcount += 7;
+                                          }
+                                          if (checkBox26_3.isChecked()) {
+                                              Ccount += 7;
+                                          }
+                                          if (checkBox26_4.isChecked()) {
+                                              Dcount += 8;
+                                          }
+                                          if (checkBox26_5.isChecked()) {
+                                              Ecount += 8;
+                                          }
+                                          CheckBox checkBox27_1 = findViewById(R.id.rBut27_1);
+                                          CheckBox checkBox27_2 = findViewById(R.id.rBut27_2);
+                                          CheckBox checkBox27_3 = findViewById(R.id.rBut27_3);
+                                          CheckBox checkBox27_4 = findViewById(R.id.rBut27_4);
+                                          CheckBox checkBox27_5 = findViewById(R.id.rBut27_5);
+                                          if (checkBox26_1.isChecked()) {
+                                              Fcount += 8;
+                                          }
+                                          if (checkBox26_2.isChecked()) {
+                                              Gcount += 9;
+                                          }
+                                          if (checkBox26_3.isChecked()) {
+                                              Hcount += 8;
+                                          }
+                                          if (checkBox26_4.isChecked()) {
+                                              Icount += 8;
+                                          }
+                                          if (checkBox26_5.isChecked()) {
                                           }
                                           int selectedId28 = rGroup28.getCheckedRadioButtonId();
                                           if (selectedId28 != -1) {
                                               switch (selectedId28) {
                                                   case R.id.rBut28_1:
                                                       Dcount += 4;
-                                                      Ecount += 4;
+                                                      Ecount += 3;
                                                       break;
                                                   case R.id.rBut28_2:
                                                       Dcount += 2;
                                                       Ecount += 2;
                                                       break;
                                                   case R.id.rBut28_3:
-                                                      Acount += 2;
-                                                      Gcount += 2;
+                                                      Gcount += 4;
                                                       break;
                                                   case R.id.rBut28_4:
-                                                      Bcount += 2;
-                                                      Ccount += 2;
-                                                      Fcount += 2;
-                                                      Hcount += 2;
+                                                      Bcount += 1;
+                                                      Ccount += 1;
+                                                      Fcount += 1;
+                                                      Hcount += 1;
                                                       Icount += 2;
                                                       break;
                                                   case R.id.rBut28_5:
-                                                      Bcount += 4;
-                                                      Ccount += 4;
-                                                      Fcount += 4;
-                                                      Hcount += 4;
+                                                      Bcount += 3;
+                                                      Ccount += 3;
+                                                      Fcount += 3;
+                                                      Hcount += 3;
                                                       Icount += 4;
                                                       break;
                                               }
@@ -665,13 +666,13 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId29 != -1) {
                                               switch (selectedId29) {
                                                   case R.id.rBut29_1:
-                                                      Bcount += 4;
-                                                      Ccount += 4;
+                                                      Bcount += 3;
+                                                      Ccount += 3;
                                                       Hcount += 4;
                                                       break;
                                                   case R.id.rBut29_2:
-                                                      Bcount += 2;
-                                                      Ccount += 2;
+                                                      Bcount += 1;
+                                                      Ccount += 1;
                                                       Hcount += 2;
                                                       break;
                                                   case R.id.rBut29_3:
@@ -680,12 +681,12 @@ public class UserInformActivity extends AppCompatActivity {
                                                       Icount += 2;
                                                       break;
                                                   case R.id.rBut29_4:
-                                                      Acount += 2;
+                                                      Acount += 1;
                                                       Fcount += 2;
                                                       Gcount += 2;
                                                       break;
                                                   case R.id.rBut29_5:
-                                                      Acount += 4;
+                                                      Acount += 2;
                                                       Fcount += 4;
                                                       Gcount += 4;
                                                       break;
@@ -695,18 +696,18 @@ public class UserInformActivity extends AppCompatActivity {
                                           if (selectedId30 != -1) {
                                               switch (selectedId30) {
                                                   case R.id.rBut30_1:
-                                                      Acount += 4;
-                                                      Fcount += 4;
+                                                      Acount += 2;
+                                                      Fcount += 3;
                                                       Gcount += 4;
                                                       break;
                                                   case R.id.rBut30_2:
-                                                      Acount += 2;
-                                                      Fcount += 2;
+                                                      Acount += 1;
+                                                      Fcount += 1;
                                                       Gcount += 2;
                                                       break;
                                                   case R.id.rBut30_3:
-                                                      Ecount += 2;
-                                                      Icount += 2;
+                                                      Ecount += 1;
+                                                      Icount += 3;
                                                       break;
                                                   case R.id.rBut30_4:
                                                       Bcount += 2;
@@ -733,7 +734,7 @@ public class UserInformActivity extends AppCompatActivity {
                                                       break;
                                                   case R.id.rBut31_3:
                                                       Acount += 2;
-                                                      Gcount += 2;
+                                                      Gcount += 3;
                                                       break;
                                                   case R.id.rBut31_4:
                                                       Bcount += 2;
@@ -741,7 +742,7 @@ public class UserInformActivity extends AppCompatActivity {
                                                       Dcount += 2;
                                                       Fcount += 2;
                                                       Icount += 2;
-                                                      Hcount += 2;
+                                                      Hcount += 1;
                                                       break;
                                                   case R.id.rBut31_5:
                                                       Bcount += 4;
@@ -749,7 +750,7 @@ public class UserInformActivity extends AppCompatActivity {
                                                       Dcount += 4;
                                                       Fcount += 4;
                                                       Icount += 4;
-                                                      Hcount += 4;
+                                                      Hcount += 3;
                                                       break;
                                               }
                                           }
@@ -766,8 +767,8 @@ public class UserInformActivity extends AppCompatActivity {
                                                       Ecount += 4;
                                                       break;
                                                   case R.id.rBut32_4:
-                                                      Acount += 2;
-                                                      Bcount += 2;
+                                                      Acount += 1;
+                                                      Bcount += 1;
                                                       Ccount += 2;
                                                       Fcount += 2;
                                                       Gcount += 2;
@@ -775,8 +776,8 @@ public class UserInformActivity extends AppCompatActivity {
                                                       Hcount += 2;
                                                       break;
                                                   case R.id.rBut32_5:
-                                                      Acount += 4;
-                                                      Bcount += 4;
+                                                      Acount += 3;
+                                                      Bcount += 3;
                                                       Ccount += 4;
                                                       Fcount += 4;
                                                       Gcount += 4;
@@ -800,7 +801,7 @@ public class UserInformActivity extends AppCompatActivity {
                                                       break;
                                                   case R.id.rBut33_3:
                                                       Dcount += 2;
-                                                      Icount += 2;
+                                                      Icount += 3;
                                                       break;
                                                   case R.id.rBut33_4:
                                                       Acount += 2;

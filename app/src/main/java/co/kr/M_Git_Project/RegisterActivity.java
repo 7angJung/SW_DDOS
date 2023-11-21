@@ -1,6 +1,6 @@
 package co.kr.M_Git_Project;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
@@ -13,19 +13,37 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.appcheck.FirebaseAppCheck;
+import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
 public class RegisterActivity extends AppCompatActivity {
     TextView back;
-    EditText name,id,pw,pw2,birth;
-    Button pwcheck, submit;
+    private EditText name,id,pw,pw2,birth;
+    private Button pwcheck, submit;
+    private FirebaseAuth mfirebaseAuth;// 파이어베이스 인증처리
+    private DatabaseReference mDatabaseRef; //실시간 데이터베이스
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        FirebaseApp.initializeApp(this);
+
+        mfirebaseAuth = FirebaseAuth.getInstance();
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("M-GIT");
 
         //뒤로 가기 버튼
         back = findViewById(R.id.back);
@@ -85,8 +103,38 @@ public class RegisterActivity extends AppCompatActivity {
         //회원가입 완료 버튼
         submit = findViewById(R.id.signupbutton);
         submit.setOnClickListener(v -> {
-            Intent intent = new Intent(this, LoginActivity.class);
-            startActivity(intent);
+            String userId = id.getText().toString()+ "@mmu.com";
+            String userPw = pw.getText().toString();
+
+            mfirebaseAuth.createUserWithEmailAndPassword(userId, userPw)
+                    .addOnCompleteListener(RegisterActivity.this, task -> {
+                        if (task.isSuccessful()) {
+                            FirebaseUser firebaseUser = mfirebaseAuth.getCurrentUser();
+                            if (firebaseUser != null) {
+                                UserAccount account = new UserAccount();
+                                account.setIdToken(firebaseUser.getUid());
+                                account.setUserId(firebaseUser.getEmail());
+                                account.setUserPw(userPw);
+
+                                // setvalue : database에 insert (삽입) 행위
+                                mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
+
+                                Toast.makeText(RegisterActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
+
+                                // 회원가입 성공 시 LoginActivity로 이동
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                startActivity(intent);
+                            } else {
+                                // 사용자 생성은 성공했지만, getCurrentUser()가 null인 경우에 대한 처리
+                                // 사용자에게 알림 등을 통해 오류를 전달하거나, 다른 적절한 조치를 취할 수 있음
+                            }
+                        } else {
+                            // 사용자 생성 실패
+                            // task.getException()을 통해 실패한 이유에 대한 정보를 얻을 수 있음
+                            Toast.makeText(RegisterActivity.this, "회원가입 실패", Toast.LENGTH_SHORT).show();
+                        }
+                    });
         });
     }
+
 }
