@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "600394906341",
-    "project_id": "mgit-51e9a",
-    "storage_bucket": "mgit-51e9a.appspot.com"
+    "project_number": "832151779353",
+    "firebase_url": "https://m-git-dd553-default-rtdb.firebaseio.com",
+    "project_id": "m-git-dd553",
+    "storage_bucket": "m-git-dd553.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:600394906341:android:2e25b46190490ff721f20c",
+        "mobilesdk_app_id": "1:832151779353:android:2ac3752aab977673f85288",
         "android_client_info": {
           "package_name": "com.example.mgit"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyATJFTmSRbaNZJHKBYr7XVgUojfgVzyq9I"
+          "current_key": "AIzaSyAkTNtpWnKnU8E0IytBYdv-L-6OdgoVq0k"
         }
       ],
       "services": {

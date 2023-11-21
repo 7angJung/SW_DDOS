@@ -2,7 +2,6 @@ package com.example.mgit;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,53 +11,47 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText id, pw;
     private TextView sign;
     private Button login;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseDatabase UserDB = FirebaseDatabase.getInstance();
-    DatabaseReference UserRef = UserDB.getReference();
+    DatabaseReference UserRef = UserDB.getReference("M-GIT");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        try {
-            //FirebaseApp.initializeApp(this);
-            //UserDB = FirebaseDatabase.getInstance();
-            //UserRef = UserDB.getReference();
+        id = (EditText)findViewById(R.id.editID);
+        pw = (EditText)findViewById(R.id.editPassword);
+        sign = (TextView)findViewById(R.id.signin);
+        login = (Button)findViewById(R.id.loginButton);
 
-            id = (EditText)findViewById(R.id.editID);
-            pw = (EditText)findViewById(R.id.editPassword);
-            sign = (TextView)findViewById(R.id.signin);
-            login = (Button)findViewById(R.id.loginButton);
+        sign.setOnClickListener(v-> {
+            Intent intent = new Intent(this, RegisterActivity.class);
+            startActivity(intent);
+        });
 
-            sign.setOnClickListener(v-> {
-                Intent intent = new Intent(this, RegisterActivity.class);
-                startActivity(intent);
-            });
-
-            login.setOnClickListener(v-> {
-                attemptLogin();
-            });
-        } catch (Throwable e) {
-            Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
-            Log.e("FirebaseInitError", "Firebase 초기화 오류: " + e.getMessage());
-        }
+        login.setOnClickListener(v-> {
+            attemptLogin();
+        });
 
     }
+
     private void attemptLogin() {
         id.setError(null);
         pw.setError(null);
 
-        String userID = id.getText().toString();
+        String userID = id.getText().toString()+"@mmu.com";
         String userPwd = pw.getText().toString();
 
         boolean cancel = false;
@@ -90,31 +83,19 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void startLogin(String ID, String Pwd) {
-        UserRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        // 인텐트 시작, 로그인 액티비티 시작
+        mAuth.signInWithEmailAndPassword(ID,Pwd).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                if (snapshot.exists()) {
-                    String passwordFromDB = snapshot.child("UserPwd").getValue(String.class);
-                    if (passwordFromDB.length() != 0 && passwordFromDB.equals(Pwd)) {
-                        // 비밀번호 일치, 로그인 성공
-                        id.setError(null);
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    } else {
-                    // 비밀번호 불일치
-                    pw.setError("비밀번호가 틀렸습니다.");
-                    pw.requestFocus();
-                    }
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra("ID",ID);
+                    startActivity(intent);
                 } else {
-                    // 해당 아이디의 사용자가 존재하지 않음
-                    id.setError("존재하지 않는 아이디입니다.");
-                    id.requestFocus();
+                    id.setError("");
+                    pw.setError("");
+                    Toast.makeText(getApplicationContext(), "존재하지 않는 학번이거나 비밀빈호가 틀렸습니다.", Toast.LENGTH_SHORT).show();
                 }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getApplicationContext(),"데이터 읽기에 실패했습니다.",Toast.LENGTH_SHORT).show();
             }
         });
     }
