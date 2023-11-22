@@ -40,10 +40,6 @@ public class RegisterActivity extends AppCompatActivity {
         UserDB = FirebaseDatabase.getInstance();
         UserRef = UserDB.getReference("M-GIT");
 
-        //뒤로 가기 버튼
-        back = (TextView)findViewById(R.id.back);
-        back.setOnClickListener(v -> onBackPressed() );
-
         //기입 항목
         name = (EditText)findViewById(R.id.signName);
         id=(EditText)findViewById(R.id.signID);
@@ -186,7 +182,7 @@ public class RegisterActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "회원가입 실패", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(getApplicationContext(), "회원가입 실패", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "해당 학번의 계정은 이미 존재합니다.", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

@@ -21,8 +21,8 @@ public class CreditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credit);
 
-        currentCredit1 = (EditText) findViewById(R.id.currentCredit1);
-        currentCredit2 = (EditText) findViewById(R.id.currentCredit2);
+        currentCredit1 = (EditText) findViewById(R.id.currentCredit1); // 전공
+        currentCredit2 = (EditText) findViewById(R.id.currentCredit2); // 교양
         currentGrade = (TextView) findViewById(R.id.currentGrade);
         currentSemester = (TextView) findViewById(R.id.currentSemester);
         insertButton = (Button) findViewById(R.id.insertButton);
@@ -42,16 +42,16 @@ public class CreditActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.menu_grade1:
-                                currentGrade.setText("1");
+                                currentGrade.setText("1학년");
                                 break;
                             case R.id.menu_grade2:
-                                currentGrade.setText("2");
+                                currentGrade.setText("2학년");
                                 break;
                             case R.id.menu_grade3:
-                                currentGrade.setText("3");
+                                currentGrade.setText("3학년");
                                 break;
                             case R.id.menu_grade4:
-                                currentGrade.setText("4");
+                                currentGrade.setText("4학년");
                                 break;
                         }
                         return false;
@@ -72,10 +72,10 @@ public class CreditActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.menu_semester1:
-                                currentSemester.setText("1");
+                                currentSemester.setText("1학기");
                                 break;
                             case R.id.menu_semester2:
-                                currentSemester.setText("2");
+                                currentSemester.setText("2학기");
                                 break;
                         }
                         return false;
@@ -128,13 +128,13 @@ public class CreditActivity extends AppCompatActivity {
 
         // 학년 유효성 검사
         if (userGrade.isEmpty()) {
-            currentGrade.setError("현재 학년을 입력해주세요.");
+            currentGrade.setError("현재 학년을 선택해주세요.");
             focusView = currentGrade;
             cancel = true;
         }
         // 학기 유효성 검사
         if(userSemester.isEmpty()) {
-            currentSemester.setError("현재 학기를 입력해주세요.");
+            currentSemester.setError("현재 학기를 선택해주세요.");
             focusView = currentSemester;
             cancel = true;
         }
