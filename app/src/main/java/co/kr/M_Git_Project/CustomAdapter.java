@@ -53,6 +53,8 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         public void bind(Post post, OnItemClickListener listener) {
             textView.setText(post.getTitle());
+
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -69,7 +71,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     //----- RecyclerView Adapter 필수 구현 항목 ----------------------------
     @NonNull
     @Override   // ViewHolder 객체를 생성하여 리턴한다.
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public CustomAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recyclerview_item, parent, false);
         return new ViewHolder(view);
@@ -77,7 +79,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
     // onBindViewHolder() 메서드 수정
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CustomAdapter.ViewHolder holder, int position) {
         Post post = localDataSet.get(position);
         holder.bind(post, itemClickListener);
     } // 뷰 요소 설정

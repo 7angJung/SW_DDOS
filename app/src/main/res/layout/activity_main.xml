@@ -117,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="게시판"
+            android:text="메모장"
             android:textColor="#1A4F7A"
             android:textSize="20sp"
             android:textStyle="bold" />

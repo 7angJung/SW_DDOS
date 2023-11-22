@@ -56,7 +56,8 @@ public class RoadmapActivity extends AppCompatActivity {
         }
 
         // 이차원 배열 접근을 위한 시작점과 끝점 설정
-        int start = Integer.parseInt(grade) * (Integer.parseInt(semester)-1) + Integer.parseInt(semester) - 1;
+        // 학년 * (학기-1) + 학기
+        int start = (Integer.parseInt(grade)-1) * 2 + ((Integer.parseInt(semester)-1))+1;
         int end = 8;
 
         // 필수 과목들 나열을 위한 StringBuilder
