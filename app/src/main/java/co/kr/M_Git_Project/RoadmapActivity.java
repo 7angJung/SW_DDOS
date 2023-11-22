@@ -72,7 +72,7 @@ public class RoadmapActivity extends AppCompatActivity {
 
         // 교약 과목 남은 학점 나열
         String leftCredit = "사용자는 현재 " + current_credit + "학점을 이수하셨고, 앞으로 " + left_credit +
-                "학점을 이수하셔야 졸업이 가능합니다. 전공은 최대 " + max_major + "학점, 최소 " + min_major + "학점을 채워야 합니다.";
+                "학점을 이수하셔야 졸업이 가능합니다. 전공은 최소 " + (70 - Integer.parseInt(credit1)) + "(부가적으로 이값은 전공과 일반선택으로 더해진 학점입니다)학점을 채워야 합니다. ";
         String interest = "사용자는 현재 " + result + "분야에 관심이 많으므로 위에 나열된 전공들을 수강하는 것을 적극 추천합니다.";
         String leftGE = "";
         if(min_ge<0 && max_ge>0) {

@@ -145,7 +145,7 @@ public class CreditActivity extends AppCompatActivity {
             Intent intent = new Intent(CreditActivity.this, RoadmapActivity.class);
             Intent intent1 = getIntent();
             intent.putExtra("credit1", userCredit1);
-            intent.putExtra("credit2", userCredit1);
+            intent.putExtra("credit2", userCredit2);
             intent.putExtra("grade", userGrade);
             intent.putExtra("semester", userSemester);
             String result = intent1.getStringExtra("result");
