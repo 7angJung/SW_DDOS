@@ -98,10 +98,7 @@ public class CareerExplorationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CreditActivity.class);
-                //Intent intent1 = new Intent(getApplicationContext(), RoadmapActivity.class);
-                //Toast.makeText(getApplicationContext(),result1,Toast.LENGTH_SHORT).show();
                 intent.putExtra("result",result1);
-                //intent1.putExtra("result",result);
                 startActivity(intent);
             }
         });

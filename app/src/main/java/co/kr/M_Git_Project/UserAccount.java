@@ -7,7 +7,7 @@ public class UserAccount {
     private String idToken; //Firebase Uid (고유 토큰 정보)
     private String userId;
     private String userPw;
-    private String userAlpha;
+    private String userAlpha; //사용자 변수
 
     public UserAccount(){ }
 

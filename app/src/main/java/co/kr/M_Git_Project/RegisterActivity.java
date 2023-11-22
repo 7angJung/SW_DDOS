@@ -45,10 +45,6 @@ public class RegisterActivity extends AppCompatActivity {
         mfirebaseAuth = FirebaseAuth.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("M-GIT");
 
-        //뒤로 가기 버튼
-        back = findViewById(R.id.back);
-        back.setOnClickListener(v -> onBackPressed() );
-
         //기입 항목
         name = findViewById(R.id.signName);  // 이름
         id=findViewById(R.id.signID);        // 아이디

@@ -117,7 +117,11 @@ public class CustomClassActivity extends AppCompatActivity {
                 break;
             case "F":
                 class1.setText("임베디드 및 시스템 설계");
-                class2.setText("");
+                class2.setText("논리회로");
+                class3.setText("");
+                class4.setText("");
+                class5.setText("");
+                break;
             case "G":
                 class1.setText("웹 프로그래밍 및 실습");
                 class2.setText("웹 프로그래밍 응용 및 실습");
@@ -154,20 +158,20 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 실험 실습\n- 김기원 교수님\n- 3학점\n- 중간평가:34/기말평가:34\n- 과제:16/출석:16\n\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("@ 김기원 교수님 짱짱맨\n@ 파이썬 학습에 좋아요");
+                         submanual3.setText("");
                          submanual3.requestLayout();
                          break;
                      case "B":
                          manual.setText("*정보보안\n\n" +
                                  "수업 개요 \n본 교과목은 정보 보안 관련 기술 지식이 필요한 대학생들에게 정보보안의 전반적인 이해를 돕는다.\n본 과목을 통하여 정보 보안 지식을 습득하여 개인 정보 보호 능력을 향상할 수 있다.\n본 과목의 학습 주제는 개인정보 보호를 위한 PC 관리 기법, 암호기술, 네트워크 및 인터넷 보안, 모바일 보안등이 있다.\n" +
                                  "\n" +
-                                 "수업 목표  \n\n");
+                                 "수업 목표  \n운영체제, 컴퓨터 네트워크, 인터넷 프로토콜 등에 대한 지식을 바탕으로 암호화, 인증, 전자서명 등의 기본 개념을 이해할 수 있다.\n주요 해킹 기법, 시스템 및 네트워크 취약성 등을 익힐수 있고, 이를 통해 시스템 보안과 네트워크 보안, 미디어 보안, 소프트웨어 보호 등에 관한 내용을 학습할 수 있다.\n");
                          manual.requestLayout();
                          submanual.setText("강의 방식\n\n- 수업 유형\n- 담당 교수님\n- 학점 \n- 성적평가 비율(23년도기준)\n\n\n ");
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 이론\n- 김기원 교수님\n- 3학점\n- 중간평가:34/기말평가:34\n- 과제:16/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("@ 김기원 교수님 짱짱맨\n@ 파이썬 학습에 좋아요");
+                         submanual3.setText("");
                          submanual3.requestLayout();
                          break;
                      case "C":
@@ -180,7 +184,10 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 실험실습\n- 김건웅 교수님\n- 3학점\n- 실험실습 실기:54/과제:25\n- 수업참여(태도):5/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("- \n- ");
+                         submanual3.setText("- 유닉스로 다루는게 너무 번거롭고 힘들어요.. 게다가 수업도 배울 게 많아서 어려워요\n" +
+                                 "- 같은 유닉스지만 체급이 말도 안 됨\n" +
+                                 "- 실습 과제를 끝낼 수 있는 당신 가능성 있어! 그대로만 해!"+
+                                 "- 기말 응용 문제 절반이상 끝내면 성적 잘나옵니다.\n\n\n");
                          submanual3.requestLayout();
                          break;
                      case "D":
@@ -193,7 +200,11 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 실험실습\n- 김치연 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 실험실습 실기:10/과제:14/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("- \n- ");
+                         submanual3.setText("- 데이터베이스를 들었으며, 데이터베이스에 대해 추가로 관심이 있는 분들에게 추천!\n" +
+                                 "- DB의 심화과정이다 보니 할 일이 되게 많습니다. 과제 수행을 열심히 하실 수 있는 분들에게 적합한 것 같아요.\n" +
+                                 "- 1학기 때와는 다른 종류의 DBMS를 사용해서 색다르다.\n" +
+                                 "- 이 과목 또한 필기가 정말 많지만, 필기 시간이 부족하다.\n" +
+                                 "- DB가 싫어도 그래도 들어보는것을 추천합니다.\n\n\n");
                          submanual3.requestLayout();
                          break;
                      case "E":
@@ -206,7 +217,9 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 이론\n- 박철수 교수님\n- 3학점\n- 중간평가:34/기말평가:34\n- 과제:16/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("- \n- ");
+                         submanual3.setText("- 확통이 이렇게 어려운 거였나..? 대학은 역시 다른건지 제가 부족한건지 모르겠다\n" +
+                                 "- R Studio를 다운로드 했지만 실습횟수는 단 한번\n" +
+                                 "- 꽤나 어려웠던 과목이였다\n\n\n");
                          submanual3.requestLayout();
                          break;
                      case "F":
@@ -219,7 +232,7 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 실험실습\n- 김기원 교수님\n- 3학점\n- 중간평가:30/기말평가:38\n- 과제:16/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("- \n- ");
+                         submanual3.setText("");
                          submanual3.requestLayout();
                          break;
                      case "G":
@@ -232,7 +245,8 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 실험실습\n- 박철수 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 과제:24/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("- \n- ");
+                         submanual3.setText("- 웹프로그래밍에 대한 기본기를 다질수 있었으며, 웹 프로그래밍이라는 과목이 무엇인지 알 수 있었습니다. \n" +
+                                 "- 기초적인 웹 HTML, XML 등 다양한 언어를 사용해보고 배워보는 즐거운 시간이었습니다.\n\n\n");
                          submanual3.requestLayout();
                          break;
                      case "H":
@@ -245,7 +259,10 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 이론\n- 정종면 교수님\n- 1학점\n- 수업참여:84/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("- \n- ");
+                         submanual3.setText("- 꿀강의, 매 주 2시간씩 특강 듣고 유용한 정보 얻어가세요!\n" +
+                                 "- 자신이 한전 KDN을 노리는 것이 아니더라도 유용한 정보가 가득하기에 추천\n" +
+                                 "- 한전KDN 가고 싶으면 들으세요.\n" +
+                                 "- 한전의 시스템에 궁금증이 많다면 추천\n\n\n");
                          submanual3.requestLayout();
                          break;
                      case "I":
@@ -258,7 +275,8 @@ public class CustomClassActivity extends AppCompatActivity {
                          submanual.requestLayout();
                          submanual2.setText("정보\n\n- 실험실습\n- 정종면 교수님\n- 3학점\n- 중간평가:30/기말평가:35\n- 과제:14/수업참여(태도):5/출석:16\n\n");
                          submanual2.requestLayout();
-                         submanual3.setText("- \n- ");
+                         submanual3.setText("- 블랙박스, 사물인식카메라 등이 어떻게 작동하는지 직접 경험해 볼 수 있었습니다. 실습이 재밌어요\n" +
+                                 "- MLB에서 공이 어떻게 날아가는지 궁금했는데 이 과목을 배우니 확실히 알 수 있었습니다.\n\n\n");
                          submanual3.requestLayout();
                          break;
                  }
@@ -279,7 +297,10 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험 실습\n- 이미라 교수님\n- 3학점\n- 중간평가:15/기말평가:15\n- 과제:54/출석:16\n\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("@ 김기원 교수님 짱짱맨\n@ 파이썬 학습에 좋아요");
+                        submanual3.setText("- 처음에는 Microsoft Window를 다루는 줄 알았는데 조금 다르다\n" +
+                                "- 수업만으로는 따라가기 쉽지 않아 개인 공부가 필요한 과목\n" +
+                                "- 실습으로 시험을 본다? 그럼 다같이 못 보니 안심하세요.\n" +
+                                "- 나만 못하는줄 알았는데 모두 못한다.\n\n\n");
                         submanual3.requestLayout();
                         break;
                     case "B":
@@ -292,7 +313,7 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험실습\n- 김기원 교수님\n- 3학점\n- 중간평가:26/기말평가:26\n- 과제:16/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("@ 김기원 교수님 짱짱맨\n@ 파이썬 학습에 좋아요");
+                        submanual3.setText("");
                         submanual3.requestLayout();
                         break;
                     case "C":
@@ -305,7 +326,7 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험실습\n- 김건웅 교수님\n- 3학점\n- 실험실습 실기:50/과제:24\n- 발표:5/수업참여(태도):5/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("");
                         submanual3.requestLayout();
                         break;
                     case "D":
@@ -318,7 +339,11 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 김치연 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 수시평가:10/과제:10\n- 수업참여(태도):4/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- DB의 기초를 제대로 알고 싶다면 이 수업입니다!! 워낙 꼼꼼한 수업으로 잘 알려주시는 것 같아요!\n" +
+                                "- 수업이 되게 체계적으로 진행되고 공부에 도움이 되는 자료도 많이 나눠주십니다.\n" +
+                                "- 꽤나 중요한 과목이므로, 신중하게 들으세요.\n" +
+                                "- 필기가 정말 많은데, 필기 시간이 부족하다...\n"+
+                                "- 나중에 정말 많이 쓰이니 잘해두는것이 좋을겁니다.\n\n\n");
                         submanual3.requestLayout();
                         break;
                     case "E":
@@ -331,7 +356,11 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험실습\n- 이미라 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 과제:24/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- 데이터를 처리하고 다루는 과정을 알 수 있었습니다.\n" +
+                                "- 이 과목을 배우면서 가장 놀란게 우리 주변에 되게 많은 정보가 알게 모르게 저장이 되어있다는 사실이다.\n" +
+                                "- 구글 코랩을 통해 실습을 하는데, 에러를 잡기가 어렵다는 단점이 존재한다.\n" +
+                                "- 이 과목 또한 개인 공부가 필수이다.\n"+
+                                "- 꽤 재미있고 쉽지는 않은 과목이다.\n\n\n");
                         submanual3.requestLayout();
                         break;
                     case "F":
@@ -344,7 +373,10 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 김기원 교수님\n- 3학점\n- 중간평가:34/기말평가:34\n- 과제:16/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- 전자부품이 어떻게 구성되고 작동하는지 어릴 적엔 궁금했는데 공부로 마주하니 궁금하지 않네요..\n" +
+                                "- 논리적인 전자회로외 논리적이지 않은 내 두뇌회로\n" +
+                                "- 개인적으로 이해하는 데까지 정말 오래 걸린 과목\n" +
+                                "- 플립플롭은 정말 레전드였다.\n\n\n");
                         submanual3.requestLayout();
                         break;
                     case "G":
@@ -357,7 +389,7 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험실습\n- 김치연 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 실험실습 실기:10/과제:14/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("");
                         submanual3.requestLayout();
                         break;
                     case "H":
@@ -372,7 +404,11 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 김치연 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 과제:14/발표:10/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- 현재 IT계열에서 트렌드 동향을 알 수 있었으며, 다양한 분야들의 정보들을 접할 수 있는 기회가 되었다. \n" +
+                                "- 이슈가 될만한 IT계열 정보를 알 수 있고 어떻게 미래사회를 대처할 지 고심할 수 있는 수업이라 생각합니다.\n" +
+                                "- 발빠르게 4차 산업의 발전에 따라가기 위해서는 이 수업 강추!\n" +
+                                "- 정신 차리고보면 진도를 말도 안 되게 많이 나간 과목이다.\n" +
+                                "- 필기가 많은데 시간이 부족하다.\n\n\n");
                         submanual3.requestLayout();
                         break;
                 }
@@ -393,7 +429,10 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 김치연 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 과제:14/출석:16\n\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("@ 김기원 교수님 짱짱맨\n@ 파이썬 학습에 좋아요");
+                        submanual3.setText("- 코딩보다는 암기 과목이 낫다 생각했는데 이 과목을 경험하고 코딩이 좋아졌어요\n" +
+                                "- 이거 벼락치기 하다가 점수에 벼락 맞습니다 성실하게 공부하세요\n" +
+                                "- 프로그래밍 언어의 역사, 중요한 특징들을 알 수 있는 과목이다.\n" +
+                                "- 필기가 너무 많고 빠르다...\n\n\n");
                         submanual3.requestLayout();
                         break;
                     case "B":
@@ -408,7 +447,11 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험실습\n- 박철수 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 과제:24/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- 외울 게 많습니다!! 그래도 열심히 하면.. 그래도 외울 게 많아요!!\n" +
+                                "- 유닉스쪽으로 갈 생각 있으면 한 번 쯤은 들어볼만한 강의\n" +
+                                "- vim 명령어들을 잘 익히도록\n" +
+                                "- 뭔가 많이 배우는 것 같지만, 다 명령어들이다.\n"+
+                                "- 쉽지 않은 친구다.");
                         submanual3.requestLayout();
                         break;
                     case "D":
@@ -423,7 +466,11 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험실습\n- 이미라 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 수시평가:10/과제:14/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- AI에 관심이 있다! 그러면 인공지능을 듣기 전 이 과목이 필수다!!\n" +
+                                "- 확실히 어렵습니다.. 개념 자체가 어려워서 공부를 열심히 해야 하는 과목이에요\n" +
+                                "- 인공지능 분야에 관심이 많다면 필수로 들어야 하는 과목이다.\n" +
+                                "- 개인 공부가 필수인 과목이다.\n"+
+                                "- 머신러닝, 딥러닝에 관심이 있다면 들어보기를 추천\n\n");
                         submanual3.requestLayout();
                         break;
                     case "F":
@@ -442,7 +489,7 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 이미라 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 과제:24/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("");
                         submanual3.requestLayout();
                         break;
                 }
@@ -463,7 +510,11 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험 실습\n- 박철수 교수님\n- 3학점\n- 중간평가:34/기말평가:34\n- 실험실습실기:16/출석:16\n\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("@ 김기원 교수님 짱짱맨\n@ 파이썬 학습에 좋아요");
+                        submanual3.setText("- 앱을 직접 만들어보고 싶은 학생들에게 추천합니다. 쉽고 빠르게 앱을 배울 수 있어요!\n" +
+                                "- 박철수 교수님의 수업진행이 워낙 시원시원하셔서 듣기 편합니다.\n" +
+                                "- 꿀팁: 컴퓨터 실습실 자리를 잘 잡아라\n" +
+                                "- 박철수 교수님 말씀만 잘 들으면 막히는 부분없이 잘 돼요. 아시겠지요?\n"+
+                                "- 수업에 집중하고 안하고 차이가 좀 큰과목\n\n");
                         submanual3.requestLayout();
                         break;
                     case "B":
@@ -478,7 +529,11 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 김건웅 교수님\n- 3학점\n- 중간평가:15/기말평가:15/\n- 수시평가:30/과제:20\n- 수업참여(태도):4/출석:16\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- 네트워크에 대해 충실한 기본을 잘 설명해주는 수업입니다. 수업 진행이 깔끔합니다.\n" +
+                                "- 진행에 막힘이 없으십니다. 매 주 정리하고 문제를 푸는 게 조금 힘들 수 있습니다..\n" +
+                                "- 과목 자체는 체급이 높지만 수업은 되게 편하게 들을 수 있다.\n" +
+                                "- 이 과목 많이 빡세다고 하는데 으으음.. 전 잘 모르겠네요.\n"+
+                                "- 공부 많이 해두면 분명 도움될 과목입니다. 많이 하세요\n\n");
                         submanual3.requestLayout();
                         break;
                     case "D":
@@ -493,7 +548,7 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 이미라 교수님\n- 3학점\n- 중간평가:30/기말평가:30\n- 수시평가:10/과제:14/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("");
                         submanual3.requestLayout();
                         break;
                     case "F":
@@ -512,7 +567,9 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 이론\n- 김동관 교수님\n- 3학점\n- 중간평가:20/기말평가:20\n- 과제:44/출석:16\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("- \n- ");
+                        submanual3.setText("- 나도 미국에서 태어났었으면.. 이라는 생각이 드는 시간이었습니다. 영어 정말 어렵네요.\n" +
+                                "- 전공과 관련된 영어를 배워서 그런지 체급이 꽤나 높다.\n" +
+                                "- 시험이 상상 이상으로 많이 빡세므로 개인 공부는 필수!\n\n");
                         submanual3.requestLayout();
                         break;
                 }
@@ -533,7 +590,12 @@ public class CustomClassActivity extends AppCompatActivity {
                         submanual.requestLayout();
                         submanual2.setText("정보\n\n- 실험 실습\n- 김동관 교수님\n- 3학점\n- 실험실습 실기:20/과제:44\n- 수업참여(태도):20/출석:16\n\n\n");
                         submanual2.requestLayout();
-                        submanual3.setText("@ 김기원 교수님 짱짱맨\n@ 파이썬 학습에 좋아요");
+                        submanual3.setText("- 자신이 코딩에 자신이 있고 코딩을 즐긴다 하는 분들은 이 과목 추천드립니다\n" +
+                                "- 매 주 코딩 프로젝트가 나가서 시간이 정말 많이 드는 과목입니다.. 신중히 선택하시길 추천드려요\n" +
+                                "- 극한으로 바쁘게 산다는 것을 체험할 수 있는 과목\n" +
+                                "- 과제 끝!!!(해 뜨는 장면을 보며)" +
+                                "- 나는 자바를 잘하는 줄 알았다. 자바 응용을 듣기 전까지는(자바 및 실습 A+수강생)\n"+
+                                "- 완강 한다면 분명 실력이 늘것입니다\n\n");
                         submanual3.requestLayout();
                         break;
                     case "B":
@@ -661,10 +723,10 @@ public class CustomClassActivity extends AppCompatActivity {
                 break;
             case R.id.C:
                 result = "C";
-                class1.setText("정보 보안");
-                class2.setText("정보 보안 및 실습");
-                class3.setText("");
-                class4.setText("");
+                class1.setText("UNIX 프로그래밍 및 실습");
+                class2.setText("네트워크 프로그램 설계");
+                class3.setText("UNIX 및 실습");
+                class4.setText("컴퓨터 네트워크");
                 class5.setText("");
                 manual.setText("과목을 눌러주세요");
                 submanual.setText("");
