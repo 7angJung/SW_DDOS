@@ -109,7 +109,7 @@ public class CreditActivity extends AppCompatActivity {
             currentCredit1.setError("현재 이수 학점(전공)을 입력해주세요.");
             focusView = currentCredit1;
             cancel = true;
-        } else if (!isCreditValid(userCredit1)) {
+        } else if (Integer.parseInt(userCredit1)<0) {
             currentCredit1.setError("적합하지 않은 숫자를 입력하였습니다.");
             focusView = currentCredit1;
             cancel = true;
@@ -120,7 +120,7 @@ public class CreditActivity extends AppCompatActivity {
             currentCredit2.setError("현재 이수 학점(교양)을 입력해주세요.");
             focusView = currentCredit2;
             cancel = true;
-        } else if (!isCreditValid(userCredit2)) {
+        } else if (Integer.parseInt(userCredit2)<0) {
             currentCredit2.setError("적합하지 않은 숫자를 입력하였습니다.");
             focusView = currentCredit2;
             cancel = true;
@@ -149,9 +149,5 @@ public class CreditActivity extends AppCompatActivity {
 
             startActivity(intent);
         }
-    }
-
-    private boolean isCreditValid(String credit) {
-        return (credit.length() >= 0 || credit.length()<=140);
     }
 }

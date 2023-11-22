@@ -7,26 +7,27 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RoadmapActivity extends AppCompatActivity {
-    private TextView required, major, ge; // 필수, 전공, 교양
+    private TextView required, major, reference; // 필수, 전공, 알림텍스트
     private String credit1;
     private String credit2;
     private String grade; // 학년
     private String semester; // 학기
     private String result = "";
-    private String[][] requiredSubject = {{"1-1","- 컴퓨터 공학 개론","- 파이썬 및 실습"},{"1-2","- 이산 수학","- C언어 및 실습"},
-            {"2-1","- 논리 회로","- 자료 구조 및 실습","- C++ 및 실습"},{"2-2","- 컴퓨터 구조","- 알고리즘 및 실습","- UNIX 프로그래밍 및 실습"},
-            {"3-1","- 운영체제","- 데이터베이스","- JAVA 및 실습"},{"3-2","- 소프트웨어 공학","- 컴퓨터 네트워크"},{"4-1","- 캡스톤 디자인"},{"4-2"}};
-    private String[][] A = {{"1-1"},{"1-2","- 창의 공학 설계"},{"2-1"},{"2-2","- 윈도우 프로그래밍"},
-            {"3-1","- 프로그래밍 언어론"},{"3-2","- JAVA응용 및 실습","- 모바일 프로그래밍"},{"4-1"},{"4-2"}};
-    private String[][] B = {{"1-1"},{"1-2"},{"2-1"},{"2-2"},{"3-1"},{"3-2"},{"4-1","- 정보보안"},{"4-2","- 정보보안 응용 및 실습"}};
-    private String[][] C = {{"1-1"},{"1-2"},{"2-1","- UNIX 및 실습"},{"2-2"},{"3-1"},{"3-2"},{"4-1","- 네트워크 프로그램 설계"},{"4-2"}};
-    private String[][] D = {{"1-1"},{"1-2"},{"2-1"},{"2-2"},{"3-1"},{"3-2","- 데이터베이스 응용 및 실습"},{"4-1"},{"4-2"}};
-    private String[][] E = {{"1-1"},{"1-2"},{"2-1"},{"2-2","- 확률과 통계"},{"3-1","- 데이터분석 및 실습"},{"3-2","- 기계 학습"},{"4-1"},{"4-2","인공지능"}};
-    private String[][] F = {{"1-1"},{"1-2"},{"1-2"},{"2-2"},{"3-1","- 임베디드 시스템 설계"},{"3-2"},{"4-1"},{"4-2"}};
-    private String[][] G = {{"1-1"},{"1-2"},{"2-1","- 웹프로그래밍 및 실습"},{"2-2","- 웹 프로그래밍 응용 및 실습"},{"3-1"},{"3-2"},{"4-1"},{"4-2"}};
-    private String[][] H = {{"1-1"},{"1-2"},{"2-1"},{"2-2"},{"3-1"},{"3-2"},{"4-1","- 전력 계통 자동화"},{"4-2","- ICT 창업 전략","- 전력 ICT 네트워크"}};
-    private String[][] I = {{"1-1"},{"1-2"},{"2-1","- 전공 영어"},{"2-2"},{"3-1","- 영상 처리"},{"3-2","- 차세대 컴퓨팅 세미나"},{"4-1","- 공학 글쓰기"},{"4-2"}};
-    private int max_credit, min_credit, max_ge, min_ge;
+    private String[][] requiredSubject = {{"<1-1>","● 컴퓨터 공학 개론","● 파이썬 및 실습"},{"<1-2>","● 이산 수학","● C언어 및 실습"},
+            {"<2-1>","● 논리 회로","● 자료 구조 및 실습","● C++ 및 실습"},{"<2-2>","● 컴퓨터 구조","● 알고리즘 및 실습","● UNIX 프로그래밍 및 실습"},
+            {"<3-1>","● 운영체제","● 데이터베이스","● JAVA 및 실습"},{"<3-2>","● 소프트웨어 공학","● 컴퓨터 네트워크"},{"<4-1>","● 캡스톤 디자인"},{}};
+    private String[][] A = {{},{"<1-2>","● 창의 공학 설계"},{},{"<2-2>","● 윈도우 프로그래밍"},
+            {"<3-1>","● 프로그래밍 언어론"},{"<3-2>","● JAVA응용 및 실습","● 모바일 프로그래밍"},{},{}};
+    private String[][] B = {{},{},{},{},{},{},{"<4-1>","● 정보보안"},{"4-2","● 정보보안 응용 및 실습"}};
+    private String[][] C = {{},{},{"<2-1>","● UNIX 및 실습"},{},{},{},{"<4-1>","● 네트워크 프로그램 설계"},{}};
+    private String[][] D = {{},{},{},{},{},{"<3-2>","● 데이터베이스 응용 및 실습"},{},{}};
+    private String[][] E = {{},{},{},{"<2-2>","● 확률과 통계"},{"<3-1>","● 데이터분석 및 실습"},{"<3-2>","● 기계 학습"},{},{"<4-2>","● 인공지능"}};
+    private String[][] F = {{},{},{},{},{"<3-1>","● 임베디드 시스템 설계"},{},{},{}};
+    private String[][] G = {{},{},{"<2-1>","● 웹프로그래밍 및 실습"},{"<2-2>","● 웹 프로그래밍 응용 및 실습"},{},{},{},{}};
+    private String[][] H = {{},{},{},{},{},{},{"<4-1>","● 전력 계통 자동화"},{"<4-2>","● ICT 창업 전략","● 전력 ICT 네트워크"}};
+    private String[][] I = {{},{},{"<2-1>","● 전공 영어"},{},{"<3-1>","● 영상 처리"},{"<3-2>","● 차세대 컴퓨팅 세미나"},{"<4-1>","● 공학 글쓰기"},{}};
+    private int max_major, min_major, max_ge, min_ge;
+    private int current_credit, left_credit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class RoadmapActivity extends AppCompatActivity {
 
         required = findViewById(R.id.required);
         major = findViewById(R.id.major);
-        ge = findViewById(R.id.ge);
+        reference = findViewById(R.id.referenceText);
 
         Intent intent = getIntent();
         if(intent != null) {
@@ -44,8 +45,11 @@ public class RoadmapActivity extends AppCompatActivity {
             grade = intent.getStringExtra("grade");
             semester = intent.getStringExtra("semester");
 
-            max_credit = 105 - Integer.parseInt(credit1);
-            min_credit = 100 - Integer.parseInt(credit1);
+            current_credit = Integer.parseInt(credit1) + Integer.parseInt(credit2);
+            left_credit = 140 - current_credit;
+
+            max_major = 105 - Integer.parseInt(credit1);
+            min_major = 100 - Integer.parseInt(credit1);
             max_ge = 40 - Integer.parseInt(credit2);
             min_ge = 35 - Integer.parseInt(credit2);
         }
@@ -65,7 +69,21 @@ public class RoadmapActivity extends AppCompatActivity {
         }
 
         // 교약 과목 남은 학점 나열
-        String geSub = "교양 학점은 최대 " + max_ge + "점, 최소 " + min_ge + " 남았습니다.";
+        String leftCredit = "사용자는 현재 " + current_credit + "학점을 이수하셨고, 앞으로 " + left_credit +
+        "학점을 이수하셔야 졸업이 가능합니다. 전공은 최대 " + max_major + "학점, 최소 " + min_major + "학점을 채워야 합니다.";
+        String interest = "그리고 사용자는 현재 " + result + "분야에 관심이 많으므로 위에 나열된 과목들을 수강하는 것을" +
+                "적극 추천합니다.";
+        String leftGE = "";
+        if(min_ge<0 && max_ge>0) {
+            leftGE = "사용자는 교약 최소 이수학점을 이행하셨습니다. 교양학점으로 채울 수 있는 남은 학점은 " + max_ge + "학점입니다.";
+        } else if(min_ge<0 && max_ge<0) {
+            leftGE = "사용자는 현재 교양으로 채울 수 있는 최대, 최소 학점을 모두 채우셨습니다.";
+        } else {
+            leftGE = "사용자는 교양 학점이 최대 " + max_ge + "학점, 최소 " + min_ge + "학점 남았습니다.";
+        }
+
+
+        reference.setText(leftCredit + "\n" + leftGE + "\n" + interest);
 
         switch(result) {
             case "A":
@@ -78,10 +96,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorA.append(subject).append("\n");
                         }
                     }
+                    majorA.append("\n");
                 }
                 major.setText(majorA.toString());
-
-                ge.setText(geSub);
 
                 break;
             case "B":
@@ -94,10 +111,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorB.append(subject).append("\n");
                         }
                     }
+                    majorB.append("\n");
                 }
                 major.setText(majorB.toString());
-
-                ge.setText(geSub);
 
                 break;
             case "C":
@@ -110,10 +126,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorC.append(subject).append("\n");
                         }
                     }
+                    majorC.append("\n");
                 }
                 major.setText(majorC.toString());
-
-                ge.setText(geSub);
 
                 break;
             case "D":
@@ -126,10 +141,10 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorD.append(subject).append("\n");
                         }
                     }
+                    majorD.append("\n");
                 }
                 major.setText(majorD.toString());
 
-                ge.setText(geSub);
                 break;
             case "E":
                 required.setText(requiredSub.toString());
@@ -141,10 +156,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorE.append(subject).append("\n");
                         }
                     }
+                    majorE.append("\n");
                 }
                 major.setText(majorE.toString());
-
-                ge.setText(geSub);
 
                 break;
             case "F":
@@ -157,10 +171,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorF.append(subject).append("\n");
                         }
                     }
+                    majorF.append("\n");
                 }
                 major.setText(majorF.toString());
-
-                ge.setText(geSub);
 
                 break;
             case "G":
@@ -173,10 +186,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorG.append(subject).append("\n");
                         }
                     }
+                    majorG.append("\n");
                 }
                 major.setText(majorG.toString());
-
-                ge.setText(geSub);
 
                 break;
             case "H":
@@ -189,10 +201,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorH.append(subject).append("\n");
                         }
                     }
+                    majorH.append("\n");
                 }
                 major.setText(majorH.toString());
-
-                ge.setText(geSub);
 
                 break;
             case "I":
@@ -205,10 +216,9 @@ public class RoadmapActivity extends AppCompatActivity {
                             majorI.append(subject).append("\n");
                         }
                     }
+                    majorI.append("\n");
                 }
                 major.setText(majorI.toString());
-
-                ge.setText(geSub);
 
                 break;
         }

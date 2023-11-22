@@ -39,13 +39,6 @@
             android:text="전공"
             android:textAlignment="center" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="#7CB342"
-            android:text="교양"
-            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
@@ -61,14 +54,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_margin="10dp"
-                android:background="@drawable/edittext_rounded_corner_rectangle">
+                android:background="@drawable/edittext_rounded_corner_rectangle"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/required"
                     android:layout_width="wrap_content"
-                    android:layout_height="500dp"
+                    android:layout_height="300dp"
                     android:layout_margin="10sp"
                     android:layout_weight="1" />
             </LinearLayout>
@@ -82,36 +75,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_margin="10dp"
-                android:background="@drawable/edittext_rounded_corner_rectangle">
+                android:background="@drawable/edittext_rounded_corner_rectangle"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/major"
                     android:layout_width="wrap_content"
-                    android:layout_height="500dp"
-                    android:layout_margin="10sp"
-                    android:layout_weight="1"
-                    android:background="@drawable/edittext_rounded_corner_rectangle" />
-            </LinearLayout>
-        </ScrollView>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_margin="10dp"
-                android:background="@drawable/edittext_rounded_corner_rectangle">
-
-                <TextView
-                    android:id="@+id/ge"
-                    android:layout_width="wrap_content"
-                    android:layout_height="500dp"
+                    android:layout_height="300dp"
                     android:layout_margin="10sp"
                     android:layout_weight="1"
                     android:background="@drawable/edittext_rounded_corner_rectangle" />
@@ -119,5 +90,14 @@
         </ScrollView>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/referenceText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="normal" />
 
 </LinearLayout>

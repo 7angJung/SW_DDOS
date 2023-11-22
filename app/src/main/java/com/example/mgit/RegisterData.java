@@ -8,6 +8,7 @@ public class RegisterData {
     private String userBirth;
     private String userPwd;
     private String userInterest;
+    private String userAuthority;
 
     public String IdToken(String idToken) { return idToken; }
 
@@ -28,6 +29,8 @@ public class RegisterData {
     }
 
     public String getUserInterest() { return userInterest; }
+
+    public String getAuthority() {return userAuthority; }
 
     public void setIdToken(String idToken) { this.idToken = idToken; }
 
@@ -51,13 +54,16 @@ public class RegisterData {
         this.userInterest = userInterest;
     }
 
-    public RegisterData(String idToken, String userName, String userID, String userBirth, String userPwd, String userInterest) {
+    public void setUserAuthority(String userAuthority) { this.userAuthority = userAuthority; }
+
+    public RegisterData(String idToken, String userName, String userID, String userBirth, String userPwd, String userInterest, String userAuthority) {
         this.idToken = idToken;
         this.userName = userName;
         this.userID = userID;
         this.userBirth = userBirth;
         this.userPwd = userPwd;
         this.userInterest = userInterest;
+        this.userAuthority = userAuthority;
     }
 
     public RegisterData() {}

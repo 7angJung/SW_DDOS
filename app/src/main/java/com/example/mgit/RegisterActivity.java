@@ -167,6 +167,14 @@ public class RegisterActivity extends AppCompatActivity {
                             account.setUserPwd(Pwd);
                             account.setUserInterest("NO");
 
+                            if(ID.length()==16) {
+                                account.setUserAuthority("학생");
+                            } else if(ID.length() == 14) {
+                                account.setUserAuthority("교수");
+                            } else {
+                                account.setUserAuthority("조교");
+                            }
+
                             // setvalue : database에 insert (삽입) 행위
                             UserRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
                             Toast.makeText(RegisterActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
