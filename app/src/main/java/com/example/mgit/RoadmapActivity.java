@@ -71,19 +71,18 @@ public class RoadmapActivity extends AppCompatActivity {
         // 교약 과목 남은 학점 나열
         String leftCredit = "사용자는 현재 " + current_credit + "학점을 이수하셨고, 앞으로 " + left_credit +
         "학점을 이수하셔야 졸업이 가능합니다. 전공은 최대 " + max_major + "학점, 최소 " + min_major + "학점을 채워야 합니다.";
-        String interest = "그리고 사용자는 현재 " + result + "분야에 관심이 많으므로 위에 나열된 과목들을 수강하는 것을" +
-                "적극 추천합니다.";
+        String interest = "사용자는 현재 " + result + "분야에 관심이 많으므로 위에 나열된 전공들을 수강하는 것을 적극 추천합니다.";
         String leftGE = "";
         if(min_ge<0 && max_ge>0) {
-            leftGE = "사용자는 교약 최소 이수학점을 이행하셨습니다. 교양학점으로 채울 수 있는 남은 학점은 " + max_ge + "학점입니다.";
+            leftGE = "사용자는 졸업요건 교양 최소 이수학점을 이행하셨습니다. 교양으로 채울 수 있는 남은 학점은 " + max_ge + "학점입니다.";
         } else if(min_ge<0 && max_ge<0) {
             leftGE = "사용자는 현재 교양으로 채울 수 있는 최대, 최소 학점을 모두 채우셨습니다.";
         } else {
-            leftGE = "사용자는 교양 학점이 최대 " + max_ge + "학점, 최소 " + min_ge + "학점 남았습니다.";
+            leftGE = "사용자는 졸업요건까지 교양 학점을 최대 " + max_ge + "학점, 최소 " + min_ge + "학점을 이수할 수 있습니다. 그 이상은 졸업학점에 포함되지 않습니다.";
         }
 
 
-        reference.setText(leftCredit + "\n" + leftGE + "\n" + interest);
+        reference.setText("● " + leftCredit + "\n" + "● " + leftGE + "\n" + "● " + interest);
 
         switch(result) {
             case "A":
