@@ -53,8 +53,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         public void bind(Post post, OnItemClickListener listener) {
             textView.setText(post.getTitle());
-
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

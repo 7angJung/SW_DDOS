@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         });
         board.setOnClickListener(v-> {
             Intent intent = new Intent(this, OnlineBoardActivity.class);
+            intent.putExtra("ID",useId);
             startActivity(intent);
         });
 

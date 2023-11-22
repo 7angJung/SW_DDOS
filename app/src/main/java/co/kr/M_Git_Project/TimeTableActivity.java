@@ -1,6 +1,7 @@
 package co.kr.M_Git_Project;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -78,6 +79,7 @@ public class TimeTableActivity extends AppCompatActivity{
         TextView fri7 = findViewById(R.id.friday7);
         TextView fri8 = findViewById(R.id.friday8);
         TextView fri9 = findViewById(R.id.friday9);
+        Button but = findViewById(R.id.closebut);
 
         mon1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,7 +100,18 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
-
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
             }
         });
         mon2.setOnClickListener(new View.OnClickListener() {
@@ -120,6 +133,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -142,6 +161,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -164,6 +189,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -186,6 +217,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -208,6 +245,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -230,6 +273,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -252,6 +301,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -295,6 +350,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -317,6 +378,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -339,6 +406,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -361,6 +434,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -383,6 +462,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -405,6 +490,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -427,6 +518,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -449,6 +546,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -471,6 +574,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -493,6 +602,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -515,6 +630,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -537,6 +658,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -559,6 +686,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -581,6 +714,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -603,6 +742,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -625,6 +770,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -647,6 +798,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -669,6 +826,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -691,6 +854,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -713,6 +882,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -735,6 +910,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -757,6 +938,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -779,6 +966,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -801,6 +994,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -823,6 +1022,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -845,6 +1050,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -867,6 +1078,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -889,6 +1106,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -911,6 +1134,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -933,6 +1162,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -955,6 +1190,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -977,6 +1218,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -999,6 +1246,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -1021,6 +1274,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -1043,6 +1302,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -1065,6 +1330,12 @@ public class TimeTableActivity extends AppCompatActivity{
                 professor.setText(professorName);
                 classroom.setText(classroomName);
                 classTime2.setText(classTimeName);
+                but.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        informdialog.dismiss();
+                    }
+                });
 
             }
         });
@@ -1306,7 +1577,7 @@ public class TimeTableActivity extends AppCompatActivity{
                 closebut.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(getApplicationContext(),ClassName, Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
                     }
                 });
 

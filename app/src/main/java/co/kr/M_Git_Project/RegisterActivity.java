@@ -1,8 +1,5 @@
 package co.kr.M_Git_Project;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,12 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.appcheck.FirebaseAppCheck;
-import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -29,50 +23,48 @@ import java.util.Calendar;
 import java.util.Locale;
 
 public class RegisterActivity extends AppCompatActivity {
-    TextView back;
-    private EditText name,id,pw,pw2,birth;
+    private TextView back,birth;
+    private EditText name,id,pw,pw2;
     private Button pwcheck, submit;
-    private FirebaseAuth mfirebaseAuth;// 파이어베이스 인증처리
-    private DatabaseReference mDatabaseRef; //실시간 데이터베이스
-
+    FirebaseAuth mAuth;
+    FirebaseDatabase UserDB;
+    DatabaseReference UserRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        FirebaseApp.initializeApp(this);
 
-        mfirebaseAuth = FirebaseAuth.getInstance();
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("M-GIT");
+        FirebaseApp.initializeApp(this);
+        mAuth = FirebaseAuth.getInstance();
+        UserDB = FirebaseDatabase.getInstance();
+        UserRef = UserDB.getReference("M-GIT");
+
 
         //기입 항목
-        name = findViewById(R.id.signName);  // 이름
-        id=findViewById(R.id.signID);        // 아이디
-        pw=findViewById(R.id.signPW);        // 비밀번호
-        pw2=findViewById(R.id.signPW2);      // 비밀번호 확인
-        birth=findViewById(R.id.signBirth);  // 생년월일
+        name = (EditText)findViewById(R.id.signName);
+        id=(EditText)findViewById(R.id.signID);
+        pw=(EditText)findViewById(R.id.signPW);
+        pw2=(EditText)findViewById(R.id.signPW2);
+        birth=(TextView)findViewById(R.id.signBirth);
 
-        // 생년월일 버튼 기능
         birth.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Calendar calendar = Calendar.getInstance();     // 캘린더 객체 생성
-                int year = calendar.get(Calendar.YEAR);         // 현재 년도
-                int month = calendar.get(Calendar.MONTH);       // 현재 달
-                int day = calendar.get(Calendar.DAY_OF_MONTH);  // 현재 월의 날짜
-
+                Calendar calendar = Calendar.getInstance();
+                int year = calendar.get(Calendar.YEAR);
+                int month = calendar.get(Calendar.MONTH);
+                int day = calendar.get(Calendar.DAY_OF_MONTH);
                 DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
                         String myFormat = "yyyy/MM/dd";
                         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.KOREA);
                         String selMonth, selDay;
-
                         if ((month + 1) <= 10)
                             selMonth = "0" + (month + 1);
                         else
                             selMonth = Integer.toString(month + 1);
-
                         if (dayOfMonth <= 10)
                             selDay = "0" + dayOfMonth;
                         else
@@ -97,40 +89,106 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         //회원가입 완료 버튼
-        submit = findViewById(R.id.signupbutton);
+        submit = (Button) findViewById(R.id.signupbutton);
+
         submit.setOnClickListener(v -> {
-            String userId = id.getText().toString()+ "@mmu.com";
-            String userPw = pw.getText().toString();
-
-            mfirebaseAuth.createUserWithEmailAndPassword(userId, userPw)
-                    .addOnCompleteListener(RegisterActivity.this, task -> {
-                        if (task.isSuccessful()) {
-                            FirebaseUser firebaseUser = mfirebaseAuth.getCurrentUser();
-                            if (firebaseUser != null) {
-                                UserAccount account = new UserAccount();
-                                account.setIdToken(firebaseUser.getUid());
-                                account.setUserId(firebaseUser.getEmail());
-                                account.setUserPw(userPw);
-
-                                // setvalue : database에 insert (삽입) 행위
-                                mDatabaseRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
-
-                                Toast.makeText(RegisterActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
-
-                                // 회원가입 성공 시 LoginActivity로 이동
-                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                startActivity(intent);
-                            } else {
-                                // 사용자 생성은 성공했지만, getCurrentUser()가 null인 경우에 대한 처리
-                                // 사용자에게 알림 등을 통해 오류를 전달하거나, 다른 적절한 조치를 취할 수 있음
-                            }
-                        } else {
-                            // 사용자 생성 실패
-                            // task.getException()을 통해 실패한 이유에 대한 정보를 얻을 수 있음
-                            Toast.makeText(RegisterActivity.this, "회원가입 실패", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+            attemptRegister();
         });
     }
 
+    void attemptRegister() {
+        name.setError(null);
+        id.setError(null);
+        pw.setError(null);
+        birth.setError(null);
+
+        String userName = name.getText().toString();
+        String userID = id.getText().toString()+"@mmu.com";
+        String userBirth = birth.getText().toString();
+        String userPwd = pw.getText().toString();
+
+        boolean cancel = false;
+        View focusView = null;
+
+        // 패스워드의 유효성 검사
+        if (userPwd.isEmpty()) {
+            id.setError("비밀번호를 입력해주세요.");
+            focusView = id;
+            cancel = true;
+        } else if (!isPasswordValid(userPwd)) {
+            pw.setError("6자 이상의 비밀번호를 입력해주세요.");
+            focusView = pw;
+            cancel = true;
+        }
+
+        // 이메일의 유효성 검사
+        if (userID.isEmpty()) {
+            id.setError("이메일을 입력해주세요.");
+            focusView = id;
+            cancel = true;
+        }
+
+        // 생년월일 유효성 검사
+        if (userBirth.isEmpty()) {
+            id.setError("생년월일을 입력해주세요.");
+            focusView = id;
+            cancel = true;
+        }
+
+        // 이름의 유효성 검사
+        if (userName.isEmpty()) {
+            name.setError("이름을 입력해주세요.");
+            focusView = name;
+            cancel = true;
+        }
+
+        if (cancel) {
+            focusView.requestFocus();
+        } else {
+            startRegister(userName, userID, userBirth, userPwd);
+        }
+    }
+
+    void startRegister(String Name, String ID, String Birth, String Pwd) {
+        mAuth.createUserWithEmailAndPassword(ID, Pwd)
+                .addOnCompleteListener(RegisterActivity.this, task -> {
+                    if (task.isSuccessful()) {
+                        FirebaseUser firebaseUser= mAuth.getCurrentUser();
+                        if (firebaseUser != null) {
+                            RegisterData account = new RegisterData();
+
+                            account.setIdToken(firebaseUser.getUid());
+                            account.setUserName(Name);
+                            account.setUserID(firebaseUser.getEmail());
+                            account.setUserBirth(Birth);
+                            account.setUserPwd(Pwd);
+                            account.setUserInterest("NO");
+
+                            if(ID.length()==16) {
+                                account.setUserAuthority("학생");
+                            } else if(ID.length() == 14) {
+                                account.setUserAuthority("교수");
+                            } else {
+                                account.setUserAuthority("조교");
+                            }
+
+                            // setvalue : database에 insert (삽입) 행위
+                            UserRef.child("UserAccount").child(firebaseUser.getUid()).setValue(account);
+                            Toast.makeText(RegisterActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
+
+                            // 회원가입 성공 시 LoginActivity로 이동
+                            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "회원가입 실패1", Toast.LENGTH_SHORT).show();
+                        }
+                    } else {
+                        Toast.makeText(getApplicationContext(), "회원가입 실패2", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    boolean isPasswordValid(String password) {
+        return password.length() >= 6;
+    }
 }
