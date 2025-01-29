@@ -8,15 +8,13 @@
 ``` 
     
 ## Environment
-- **Python 3.8**
+- **Java**
 - **Libraries**
 
 ## Stack
 - **Frontend**
-
+    - XML
 - **Backend**
-
-- **Hardware**
-
+    - Firebase
 
 ## Structure
